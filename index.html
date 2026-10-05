@@ -3,1349 +3,1315 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="Nicholas Waweru is a web developer in Nairobi, Kenya building websites and digital platforms that help businesses grow, reach audiences and connect with customers.">
+
 <meta name="author" content="Nicholas Waweru">
+
 <meta property="og:title" content="Nicholas Waweru | Web Developer in Nairobi, Kenya">
 <meta property="og:description" content="Websites and digital platforms that help businesses grow, reach audiences and connect with customers.">
+<meta property="og:type" content="website">
+
+<link rel="canonical" href="https://nicholaskanyi00-droid.github.io/">
+
 <title>Nicholas Waweru | Web Developer in Nairobi, Kenya</title>
 
 <style>
 :root{
---bg:#faf7f2;
---card:#fff;
---ink:#17324d;
---muted:#6b7885;
---line:#e5ddd3;
---accent:#c96c43;
---accent-dark:#a95330;
---soft:#f4ebe3;
---soft2:#fff1e8;
---shadow:0 16px 45px rgba(23,50,77,.09);
---max:1180px
+  --bg:#faf7f2;
+  --white:#ffffff;
+  --ink:#17324d;
+  --muted:#697887;
+  --line:#e5ddd3;
+  --accent:#c86b42;
+  --accent-dark:#a8502f;
+  --accent-soft:#f5dfd3;
+  --soft:#f3ece4;
+  --success:#28735a;
+  --shadow:0 18px 50px rgba(23,50,77,.10);
+  --max:1180px;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
-background:var(--bg);
-color:var(--ink);
-line-height:1.6;
-overflow-x:hidden
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  overflow-x:hidden;
 }
 
-body.no-scroll{overflow:hidden}
-
-a{
-text-decoration:none;
-color:inherit
+body.locked{
+  overflow:hidden;
 }
 
 img{
-display:block;
-max-width:100%
+  display:block;
+  max-width:100%;
 }
 
-button,input,textarea,select{
-font:inherit
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
 }
 
 button{
-cursor:pointer
+  cursor:pointer;
 }
 
-.wrap{
-width:min(var(--max),calc(100% - 36px));
-margin:auto
+button:disabled{
+  opacity:.65;
+  cursor:not-allowed;
+}
+
+:focus-visible{
+  outline:3px solid rgba(200,107,66,.3);
+  outline-offset:3px;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 36px));
+  margin:auto;
 }
 
 .eyebrow{
-display:inline-flex;
-align-items:center;
-gap:8px;
-padding:7px 11px;
-border:1px solid var(--line);
-border-radius:999px;
-background:#fff;
-color:var(--accent-dark);
-font-size:.73rem;
-font-weight:900;
-letter-spacing:.08em;
-text-transform:uppercase
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 11px;
+  border:1px solid var(--line);
+  background:var(--white);
+  border-radius:999px;
+  color:var(--accent-dark);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
 }
 
-.eyebrow:before{
-content:"";
-width:7px;
-height:7px;
-border-radius:50%;
-background:var(--accent)
+.eyebrow::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--accent);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border:0;
+  border-radius:12px;
+  padding:12px 16px;
+  font-weight:900;
+  transition:.18s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  color:#fff;
+  background:var(--accent);
+  box-shadow:0 10px 22px rgba(200,107,66,.2);
+}
+
+.btn-primary:hover{
+  background:var(--accent-dark);
+}
+
+.btn-secondary{
+  background:#fff;
+  border:1px solid var(--line);
+  color:var(--ink);
 }
 
 /* HEADER */
 
-header{
-position:sticky;
-top:0;
-z-index:50;
-background:rgba(250,247,242,.93);
-backdrop-filter:blur(12px);
-border-bottom:1px solid var(--line)
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(250,247,242,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
 }
 
 .nav{
-height:74px;
-display:flex;
-align-items:center;
-justify-content:space-between
+  height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .brand{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:950;
-letter-spacing:.01em
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:950;
 }
 
-.brandMark{
-width:38px;
-height:38px;
-border-radius:11px;
-background:var(--accent);
-color:#fff;
-display:grid;
-place-items:center
+.brand-mark{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  background:var(--accent);
+  color:#fff;
 }
 
-.navLinks{
-display:flex;
-align-items:center;
-gap:25px
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
 }
 
-.navLinks a{
-font-size:.9rem;
-font-weight:800;
-color:#465766
+.nav-links a{
+  font-size:.88rem;
+  font-weight:800;
+  color:#445665;
 }
 
-.navLinks .navCta{
-padding:10px 14px;
-border-radius:10px;
-background:var(--ink);
-color:#fff
+.nav-links .nav-cta{
+  background:var(--ink);
+  color:#fff;
+  border-radius:11px;
+  padding:10px 14px;
 }
 
 .menu{
-display:none;
-width:43px;
-height:43px;
-border:1px solid var(--line);
-border-radius:11px;
-background:#fff;
-color:var(--ink)
+  display:none;
+  width:43px;
+  height:43px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:#fff;
+  color:var(--ink);
 }
 
 /* HERO */
 
 .hero{
-padding:88px 0 60px
+  padding:88px 0 60px;
 }
 
-.heroGrid{
-display:grid;
-grid-template-columns:1.04fr .96fr;
-gap:48px;
-align-items:center
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.06fr .94fr;
+  gap:48px;
+  align-items:center;
 }
 
 .hero h1{
-font-size:clamp(2.8rem,6.6vw,5.35rem);
-line-height:.95;
-letter-spacing:-.055em;
-margin:18px 0
+  font-size:clamp(2.8rem,6.7vw,5.5rem);
+  line-height:.95;
+  letter-spacing:-.055em;
+  margin:18px 0 21px;
 }
 
 .hero h1 span{
-color:var(--accent)
+  color:var(--accent);
 }
 
-.lead{
-font-size:1.08rem;
-color:var(--muted);
-max-width:690px
+.hero-lead{
+  max-width:720px;
+  color:var(--muted);
+  font-size:1.08rem;
+}
+
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:22px 0 27px;
 }
 
 .meta{
-display:flex;
-flex-wrap:wrap;
-gap:9px;
-margin:22px 0 28px
+  padding:8px 11px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:#506271;
+  font-size:.82rem;
+  font-weight:750;
 }
 
-.meta span{
-padding:8px 11px;
-background:#fff;
-border:1px solid var(--line);
-border-radius:999px;
-font-size:.82rem;
-font-weight:750;
-color:#536574
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
-.actions{
-display:flex;
-flex-wrap:wrap;
-gap:10px
+.hero-art{
+  min-height:425px;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:27px;
+  background:#efe6dd;
+  box-shadow:var(--shadow);
+  position:relative;
 }
 
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:12px 16px;
-border-radius:11px;
-border:1px solid transparent;
-font-weight:900;
-transition:.18s
+.browser{
+  min-height:383px;
+  border-radius:20px;
+  overflow:hidden;
+  background:#10283d;
+  color:#e9f0f4;
 }
 
-.btn:hover{
-transform:translateY(-2px)
-}
-
-.primary{
-background:var(--accent);
-color:#fff
-}
-
-.primary:hover{
-background:var(--accent-dark)
-}
-
-.secondary{
-background:#fff;
-border-color:var(--line)
-}
-
-/* HERO VISUAL */
-
-.heroVisual{
-position:relative;
-min-height:430px;
-padding:20px;
-background:#efe6dd;
-border:1px solid var(--line);
-border-radius:26px;
-box-shadow:var(--shadow)
-}
-
-.screen{
-height:390px;
-border-radius:20px;
-background:#10283d;
-overflow:hidden;
-color:#eef4f7
-}
-
-.screenTop{
-height:42px;
-background:#17364e;
-display:flex;
-align-items:center;
-gap:7px;
-padding:0 14px
+.browser-top{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:12px 14px;
+  background:#17364e;
 }
 
 .dot{
-width:9px;
-height:9px;
-border-radius:50%;
-background:#94a5b2
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#8fa1af;
 }
 
-.screenBody{
-padding:28px 22px;
-font:13px/1.9 Consolas,monospace
+.browser-code{
+  padding:25px 22px;
+  font-family:Consolas,monospace;
+  font-size:.82rem;
+  line-height:1.8;
 }
 
 .orange{color:#ffb796}
 .green{color:#9ed8bf}
-.blue{color:#a3c9ee}
-.dim{color:#7890a0}
+.blue{color:#a6c9ed}
+.dim{color:#7c94a4}
 
-.growth{
-position:absolute;
-right:7%;
-bottom:6%;
-background:#fff;
-border:1px solid var(--line);
-padding:15px;
-border-radius:15px;
-box-shadow:var(--shadow);
-max-width:230px
+.art-card{
+  position:absolute;
+  right:6%;
+  bottom:6%;
+  width:225px;
+  padding:15px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow:var(--shadow);
 }
 
-.growth strong{
-display:block
+.art-card strong{
+  display:block;
+  margin-bottom:4px;
 }
 
-.growth small{
-display:block;
-color:var(--muted);
-margin-top:3px
-}
-
-/* GENERAL SECTIONS */
-
-section.section{
-padding:88px 0
-}
-
-.heading{
-max-width:760px;
-margin-bottom:38px
-}
-
-.heading h2{
-font-size:clamp(2rem,4vw,3.2rem);
-line-height:1.04;
-letter-spacing:-.04em;
-margin:14px 0
-}
-
-.heading p{
-color:var(--muted);
-font-size:1rem
+.art-card small{
+  color:var(--muted);
 }
 
 /* VALUE */
 
-.valueGrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:13px
+.value-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px;
+  padding-bottom:10px;
 }
 
-.value{
-background:#fff;
-border:1px solid var(--line);
-border-radius:16px;
-padding:17px
+.value-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
 }
 
-.value strong{
-font-size:.8rem;
-letter-spacing:.09em
+.value-card strong{
+  font-size:.78rem;
+  letter-spacing:.09em;
 }
 
-.value p{
-font-size:.86rem;
-color:var(--muted);
-margin-top:4px
+.value-card p{
+  color:var(--muted);
+  font-size:.84rem;
+  margin-top:4px;
+}
+
+/* SECTIONS */
+
+.section{
+  padding:88px 0;
+}
+
+.section-heading{
+  max-width:760px;
+  margin-bottom:38px;
+}
+
+.section-heading h2{
+  font-size:clamp(2rem,4vw,3.25rem);
+  line-height:1.05;
+  letter-spacing:-.04em;
+  margin:13px 0;
+}
+
+.section-heading p{
+  color:var(--muted);
 }
 
 /* WHY */
 
-.why{
-background:#fff;
-border-block:1px solid var(--line)
+.why-section{
+  background:#fff;
+  border-block:1px solid var(--line);
 }
 
-.whyGrid{
-display:grid;
-grid-template-columns:.86fr 1.14fr;
-gap:44px
+.why-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:42px;
 }
 
-.statement{
-font-size:clamp(2rem,4vw,3.3rem);
-line-height:1.03;
-letter-spacing:-.04em
+.big-statement{
+  font-size:clamp(2rem,4vw,3.4rem);
+  line-height:1.04;
+  letter-spacing:-.045em;
 }
 
-.statement span{
-color:var(--accent)
+.big-statement span{
+  color:var(--accent);
 }
 
-.copy{
-color:var(--muted);
-margin-top:15px;
-max-width:540px
+.why-copy{
+  margin-top:16px;
+  color:var(--muted);
+  max-width:540px;
 }
 
-.reasons{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:13px
+.reason-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:13px;
 }
 
 .reason{
-background:var(--bg);
-border:1px solid var(--line);
-border-radius:16px;
-padding:18px
+  padding:19px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:var(--bg);
 }
 
-.reasonNum{
-width:31px;
-height:31px;
-display:grid;
-place-items:center;
-border-radius:9px;
-background:var(--soft);
-color:var(--accent-dark);
-font-size:.76rem;
-font-weight:900;
-margin-bottom:11px
+.reason-num{
+  width:31px;
+  height:31px;
+  border-radius:9px;
+  background:var(--accent-soft);
+  color:var(--accent-dark);
+  display:grid;
+  place-items:center;
+  font-size:.76rem;
+  font-weight:900;
+  margin-bottom:12px;
 }
 
 .reason h3{
-font-size:1rem;
-margin-bottom:4px
+  font-size:1rem;
+  margin-bottom:4px;
 }
 
 .reason p{
-font-size:.86rem;
-color:var(--muted)
+  color:var(--muted);
+  font-size:.84rem;
 }
 
 /* SERVICES */
 
-.services{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:14px
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
 }
 
 .service{
-background:#fff;
-border:1px solid var(--line);
-border-radius:16px;
-padding:20px;
-box-shadow:0 8px 25px rgba(23,50,77,.05)
+  padding:20px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:17px;
+  box-shadow:0 8px 25px rgba(23,50,77,.05);
 }
 
-.serviceIcon{
-width:39px;
-height:39px;
-border-radius:10px;
-background:var(--soft2);
-color:var(--accent-dark);
-display:grid;
-place-items:center;
-font-size:.78rem;
-font-weight:900;
-margin-bottom:13px
+.service-icon{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  background:var(--accent-soft);
+  color:var(--accent-dark);
+  font-weight:900;
+  font-size:.75rem;
+  margin-bottom:13px;
 }
 
 .service h3{
-font-size:.98rem;
-margin-bottom:5px
+  font-size:.97rem;
+  margin-bottom:5px;
 }
 
 .service p{
-font-size:.84rem;
-color:var(--muted)
+  color:var(--muted);
+  font-size:.84rem;
 }
 
-/* WORK SHOWROOM */
+/* WORK */
 
-.workIntro{
-display:flex;
-justify-content:space-between;
-gap:20px;
-align-items:end;
-margin-bottom:35px
+.work-section{
+  background:#f6f0e9;
+  border-block:1px solid var(--line);
 }
 
-.workIntro .heading{
-margin-bottom:0
-}
-
-.showroomNote{
-max-width:290px;
-color:var(--muted);
-font-size:.82rem;
-text-align:right
-}
-
-.workGrid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
 }
 
 .project{
-background:#fff;
-border:1px solid var(--line);
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 9px 28px rgba(23,50,77,.07);
-transition:.2s
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:21px;
+  box-shadow:0 10px 30px rgba(23,50,77,.08);
 }
 
-.project:hover{
-transform:translateY(-4px);
-box-shadow:var(--shadow)
+.project-image{
+  height:255px;
+  position:relative;
+  overflow:hidden;
 }
 
-.projectImg{
-height:250px;
-position:relative;
-overflow:hidden
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.35s ease;
 }
 
-.projectImg img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.35s
+.project:hover .project-image img{
+  transform:scale(1.04);
 }
 
-.project:hover .projectImg img{
-transform:scale(1.04)
+.project-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:flex-end;
+  padding:17px;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.62));
 }
 
-.projectShade{
-position:absolute;
-inset:0;
-background:linear-gradient(180deg,transparent,rgba(10,26,40,.68));
-display:flex;
-align-items:flex-end;
-padding:17px
+.demo-tag{
+  display:inline-block;
+  padding:6px 9px;
+  border-radius:999px;
+  background:#fff;
+  color:var(--ink);
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.07em;
 }
 
-.tag{
-background:#fff;
-border-radius:999px;
-padding:6px 9px;
-font-size:.67rem;
-font-weight:900;
-letter-spacing:.08em
+.project-overlay h3{
+  color:#fff;
+  font-size:1.43rem;
+  line-height:1.04;
+  margin-top:8px;
 }
 
-.projectShade h3{
-color:#fff;
-font-size:1.4rem;
-line-height:1.03;
-margin-top:8px
+.project-body{
+  padding:21px;
 }
 
-.projectBody{
-padding:20px
+.project-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  color:var(--muted);
+  font-size:.78rem;
+  font-weight:800;
+  margin-bottom:10px;
 }
 
-.projectMeta{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-color:var(--muted);
-font-size:.78rem;
-font-weight:800;
-margin-bottom:9px
+.project-body p{
+  color:var(--muted);
+  font-size:.88rem;
+  margin-bottom:16px;
 }
 
-.projectBody p{
-color:var(--muted);
-font-size:.88rem;
-margin-bottom:16px
+.project-note{
+  padding:10px 12px;
+  border-radius:11px;
+  background:var(--accent-soft);
+  border:1px solid #ecd2c1;
+  color:#75503e;
+  font-size:.76rem;
 }
 
-.note{
-margin-top:13px;
-background:var(--soft2);
-border:1px solid #ecd4c5;
-padding:10px 12px;
-border-radius:11px;
-color:#77503d;
-font-size:.77rem
-}
-
-/* FIX BANNER */
+/* BANNER */
 
 .banner{
-background:var(--ink);
-color:#fff;
-border-radius:23px;
-padding:30px;
-display:grid;
-grid-template-columns:1fr auto;
-gap:25px;
-align-items:center
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:25px;
+  align-items:center;
+  padding:31px;
+  border-radius:23px;
+  background:var(--ink);
+  color:#fff;
 }
 
 .banner h2{
-font-size:clamp(1.9rem,4vw,3rem);
-line-height:1.04;
-margin:11px 0 6px
+  font-size:clamp(1.9rem,4vw,3rem);
+  line-height:1.03;
+  margin:12px 0 7px;
 }
 
 .banner p{
-color:#bfd0da;
-max-width:700px
+  color:#c1ced7;
 }
 
-.ticks{
-display:flex;
-flex-wrap:wrap;
-gap:7px;
-margin-top:15px
+.banner-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:14px;
 }
 
-.ticks span{
-border:1px solid rgba(255,255,255,.15);
-padding:6px 9px;
-border-radius:999px;
-font-size:.75rem;
-color:#d6e0e5
+.banner-pills span{
+  padding:6px 9px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  color:#d8e0e5;
+  font-size:.74rem;
 }
 
 /* PROCESS */
 
 .process{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:14px
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
 }
 
 .step{
-background:#fff;
-border:1px solid var(--line);
-border-radius:16px;
-padding:19px
+  padding:20px;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:16px;
 }
 
-.stepNo{
-color:var(--accent);
-font-size:.76rem;
-font-weight:900;
-letter-spacing:.08em
+.step-no{
+  color:var(--accent);
+  font-size:.76rem;
+  font-weight:900;
 }
 
 .step h3{
-font-size:.98rem;
-margin:7px 0 4px
+  margin:7px 0 5px;
+  font-size:.99rem;
 }
 
 .step p{
-font-size:.84rem;
-color:var(--muted)
+  color:var(--muted);
+  font-size:.83rem;
 }
 
 /* ABOUT */
 
-.aboutGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
 }
 
-.aboutCard,
-.skillsCard{
-background:#fff;
-border:1px solid var(--line);
-border-radius:20px;
-padding:27px
+.about-card,
+.skills-card{
+  padding:28px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
 }
 
-.aboutCard h3,
-.skillsCard h3{
-font-size:1.3rem;
-margin:13px 0 10px
+.about-card h3,
+.skills-card h3{
+  font-size:1.25rem;
+  margin:12px 0;
 }
 
-.aboutCard p{
-color:var(--muted);
-margin-top:9px;
-font-size:.92rem
+.about-card p{
+  color:var(--muted);
+  font-size:.91rem;
+  margin-bottom:10px;
 }
 
 .skills{
-display:flex;
-flex-wrap:wrap;
-gap:8px
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
 }
 
 .skill{
-padding:8px 10px;
-border-radius:10px;
-background:var(--soft);
-border:1px solid var(--line);
-font-size:.78rem;
-font-weight:800;
-color:#4a5c69
+  padding:8px 10px;
+  border-radius:10px;
+  background:var(--soft);
+  border:1px solid var(--line);
+  color:#455967;
+  font-size:.76rem;
+  font-weight:800;
+}
+
+.support-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:20px;
 }
 
 .support{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-margin-top:18px
+  padding:13px;
+  border-radius:12px;
+  background:var(--bg);
+  border:1px solid var(--line);
 }
 
-.supportBox{
-padding:13px;
-background:var(--bg);
-border:1px solid var(--line);
-border-radius:12px
+.support strong{
+  display:block;
+  font-size:.84rem;
 }
 
-.supportBox strong{
-display:block;
-font-size:.84rem
-}
-
-.supportBox span{
-font-size:.74rem;
-color:var(--muted)
+.support small{
+  color:var(--muted);
 }
 
 /* CONTACT */
 
-.contact{
-background:#fff;
-border-top:1px solid var(--line)
+.contact-section{
+  background:#fff;
+  border-top:1px solid var(--line);
 }
 
-.contactGrid{
-display:grid;
-grid-template-columns:.85fr 1.15fr;
-gap:42px
+.contact-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:42px;
+  align-items:start;
 }
 
-.contact h2{
-font-size:clamp(2rem,4vw,3.2rem);
-line-height:1.03;
-letter-spacing:-.04em;
-margin:14px 0
+.contact-title{
+  font-size:clamp(2rem,4vw,3.25rem);
+  line-height:1.04;
+  letter-spacing:-.04em;
+  margin:13px 0;
 }
 
-.contact p{
-color:var(--muted)
+.contact-copy p{
+  color:var(--muted);
+  max-width:530px;
 }
 
-.contactDetails{
-display:grid;
-gap:9px;
-margin-top:22px
+.contact-details{
+  display:grid;
+  gap:9px;
+  margin-top:22px;
 }
 
-.contactItem{
-background:var(--bg);
-border:1px solid var(--line);
-padding:12px 14px;
-border-radius:12px
+.contact-item{
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--bg);
 }
 
-.contactItem small{
-display:block;
-text-transform:uppercase;
-color:var(--muted);
-font-size:.67rem;
-font-weight:900;
-letter-spacing:.08em
+.contact-item strong{
+  display:block;
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--muted);
 }
 
-.contactItem strong{
-font-size:.9rem
+.contact-item span{
+  font-weight:800;
+  font-size:.87rem;
 }
 
-.form{
-background:var(--bg);
-border:1px solid var(--line);
-border-radius:20px;
-padding:23px
+.contact-form{
+  padding:23px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:var(--bg);
 }
 
-.formGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
 .field{
-display:grid;
-gap:6px
+  display:grid;
+  gap:6px;
 }
 
 .field.full{
-grid-column:1/-1
+  grid-column:1/-1;
 }
 
 .field label{
-font-size:.77rem;
-font-weight:850
+  font-size:.75rem;
+  font-weight:850;
 }
 
 .field input,
-.field select,
-.field textarea{
-width:100%;
-padding:11px 12px;
-border:1px solid #d6cec4;
-border-radius:10px;
-background:#fff;
-color:var(--ink);
-outline:none
+.field textarea,
+.field select{
+  width:100%;
+  padding:11px 12px;
+  border:1px solid #d5cdc3;
+  border-radius:10px;
+  background:#fff;
+  color:var(--ink);
 }
 
 .field textarea{
-min-height:125px;
-resize:vertical
+  min-height:135px;
+  resize:vertical;
 }
 
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-border-color:var(--accent);
-box-shadow:0 0 0 3px rgba(201,108,67,.12)
+.form-note{
+  margin-top:9px;
+  color:var(--muted);
+  font-size:.73rem;
 }
 
-.formHelp{
-font-size:.73rem;
-color:var(--muted);
-margin-top:8px
-}
-
-.status{
-display:none;
-margin-top:8px;
-font-size:.8rem;
-color:#28715a
+.form-status{
+  display:none;
+  margin-top:10px;
+  color:var(--success);
+  font-size:.8rem;
+  font-weight:750;
 }
 
 /* FOOTER */
 
 footer{
-padding:27px 0;
-border-top:1px solid var(--line)
+  padding:28px 0;
+  background:var(--bg);
+  border-top:1px solid var(--line);
 }
 
 .footer{
-display:flex;
-justify-content:space-between;
-gap:14px;
-flex-wrap:wrap;
-color:var(--muted);
-font-size:.8rem
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:15px;
 }
 
 .footer strong{
-display:block;
-color:var(--ink)
+  display:block;
 }
 
-/* BACK TO TOP */
+.footer span{
+  color:var(--muted);
+  font-size:.78rem;
+}
+
+/* TOP BUTTON */
 
 .top{
-position:fixed;
-right:16px;
-bottom:16px;
-width:43px;
-height:43px;
-border:1px solid var(--line);
-border-radius:11px;
-background:#fff;
-color:var(--ink);
-box-shadow:var(--shadow);
-opacity:0;
-pointer-events:none;
-transition:.2s
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  width:43px;
+  height:43px;
+  border-radius:11px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  box-shadow:var(--shadow);
+  opacity:0;
+  pointer-events:none;
+  transition:.2s;
+  z-index:30;
 }
 
 .top.show{
-opacity:1;
-pointer-events:auto
+  opacity:1;
+  pointer-events:auto;
 }
 
-/* =========================================================
-   FULL DEMO VIEWER
-   ALL FOUR MINI-SITES ARE INSIDE THIS SAME INDEX.HTML
-========================================================= */
+/* ==================================================
+   DEMO VIEWER
+================================================== */
 
-.viewer{
-position:fixed;
-inset:0;
-z-index:100;
-background:#fff;
-display:none;
-overflow:auto
+.demo-viewer{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:none;
+  overflow:auto;
+  background:#fff;
 }
 
-.viewer.open{
-display:block
+.demo-viewer.open{
+  display:block;
 }
 
-.viewerBar{
-position:sticky;
-top:0;
-z-index:110;
-height:68px;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #e3ded7;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 15px
+.viewer-bar{
+  position:sticky;
+  top:0;
+  z-index:120;
+  min-height:68px;
+  padding:0 15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e6e2db;
 }
 
-.viewerTitle{
-font-weight:950
+.viewer-title{
+  font-weight:950;
 }
 
-.viewerTitle small{
-display:block;
-color:var(--muted);
-font-size:.68rem;
-font-weight:700
+.viewer-subtitle{
+  display:block;
+  color:var(--muted);
+  font-size:.68rem;
 }
 
-.backBtn{
-border:1px solid var(--line);
-background:#fff;
-border-radius:10px;
-padding:9px 12px;
-font-weight:900;
-color:var(--ink)
+.back-demo{
+  padding:9px 12px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  font-weight:900;
 }
 
-.demo{
-display:none;
-min-height:calc(100vh - 68px)
+.demo-site{
+  display:none;
+  min-height:calc(100vh - 68px);
 }
 
-.demo.active{
-display:block
+.demo-site.active{
+  display:block;
 }
 
-.demoInner{
-width:min(1180px,calc(100% - 34px));
-margin:auto
+.demo-container{
+  width:min(1160px,calc(100% - 34px));
+  margin:auto;
 }
 
-.demoNav{
-padding:17px 0;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:18px
+.demo-nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  padding:18px 0;
 }
 
-.demoLogo{
-font-weight:950;
-font-size:.98rem
+.demo-logo{
+  font-weight:950;
+  letter-spacing:-.02em;
 }
 
-.demoLinks{
-display:flex;
-gap:15px;
-flex-wrap:wrap
+.demo-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
 }
 
-.demoLinks a{
-font-size:.75rem;
-font-weight:850;
-opacity:.84
+.demo-links a{
+  font-size:.76rem;
+  font-weight:850;
 }
 
-.demoHero{
-display:grid;
-grid-template-columns:1.06fr .94fr;
-gap:36px;
-align-items:center;
-padding:58px 0 68px
+.demo-hero{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:38px;
+  align-items:center;
+  padding:62px 0 72px;
 }
 
-.demoHero h1{
-font-size:clamp(2.4rem,5.5vw,4.8rem);
-line-height:.96;
-letter-spacing:-.05em;
-margin:13px 0
+.demo-hero h1{
+  font-size:clamp(2.4rem,5.5vw,4.8rem);
+  line-height:.96;
+  letter-spacing:-.05em;
+  margin:13px 0;
 }
 
-.demoHero p{
-font-size:.98rem;
-max-width:650px;
-opacity:.8
+.demo-hero p{
+  max-width:650px;
+  color:rgba(255,255,255,.78);
+  font-size:.98rem;
 }
 
-.demoActions{
-display:flex;
-flex-wrap:wrap;
-gap:9px;
-margin-top:20px
+.demo-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:20px;
 }
 
-.demoBtn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:10px 13px;
-border-radius:10px;
-font-size:.78rem;
-font-weight:900;
-border:1px solid rgba(255,255,255,.2)
+.demo-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 13px;
+  border-radius:10px;
+  font-size:.78rem;
+  font-weight:900;
 }
 
-.demoBtn.light{
-background:#fff;
-color:var(--ink)
+.demo-btn.light{
+  background:#fff;
+  color:#17324d;
 }
 
-.demoBtn.ghost{
-color:#fff;
-background:rgba(255,255,255,.08)
+.demo-btn.outline{
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.15);
 }
 
-.demoPhoto{
-height:340px;
-border-radius:23px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,.14);
-box-shadow:0 24px 60px rgba(0,0,0,.18)
+.demo-photo{
+  height:350px;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 25px 65px rgba(0,0,0,.2);
 }
 
-.demoPhoto img{
-width:100%;
-height:100%;
-object-fit:cover
+.demo-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.demoSection{
-padding:70px 0
+.demo-section{
+  padding:72px 0;
 }
 
-.demoSection h2{
-font-size:clamp(1.9rem,4vw,3rem);
-line-height:1.05;
-letter-spacing:-.04em;
-margin:10px 0
+.demo-section h2{
+  font-size:clamp(1.9rem,4vw,3rem);
+  line-height:1.04;
+  letter-spacing:-.04em;
+  margin:11px 0 13px;
 }
 
-.demoSection>p{
-max-width:700px;
-opacity:.72
+.demo-section>p{
+  max-width:700px;
+  opacity:.74;
 }
 
-.demoCards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:13px;
-margin-top:25px
+.demo-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+  margin-top:24px;
 }
 
-.demoCard{
-background:rgba(255,255,255,.8);
-border:1px solid rgba(23,50,77,.1);
-border-radius:16px;
-padding:18px
+.demo-card{
+  padding:19px;
+  background:rgba(255,255,255,.76);
+  border:1px solid rgba(23,50,77,.10);
+  border-radius:16px;
 }
 
-.demoCard h3{
-font-size:.95rem;
-margin-bottom:5px
+.demo-card h3{
+  font-size:.94rem;
+  margin-bottom:5px;
 }
 
-.demoCard p{
-font-size:.8rem;
-opacity:.7
+.demo-card p{
+  font-size:.81rem;
+  opacity:.72;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:1.25fr .75fr;
-grid-template-rows:185px 185px;
-gap:11px;
-margin-top:24px
+.demo-gallery{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  grid-template-rows:190px 190px;
+  gap:12px;
+  margin-top:23px;
 }
 
-.gallery img{
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:15px
+.demo-gallery img{
+  width:100%;
+  height:100%;
+  border-radius:16px;
+  object-fit:cover;
 }
 
-.gallery .big{
-grid-row:1/3
+.demo-gallery .big{
+  grid-row:1/3;
 }
 
-.demoContact{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:22px;
-align-items:start
+.demo-contact{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
 }
 
-.demoForm{
-background:rgba(255,255,255,.07);
-border:1px solid rgba(255,255,255,.14);
-border-radius:17px;
-padding:20px
+.demo-form{
+  padding:21px;
+  border-radius:17px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
 }
 
-.demoForm input,
-.demoForm textarea{
-width:100%;
-padding:11px 12px;
-margin-bottom:9px;
-border-radius:10px;
-border:1px solid rgba(255,255,255,.15);
-background:rgba(255,255,255,.06);
-color:inherit
+.demo-form input,
+.demo-form textarea{
+  width:100%;
+  padding:11px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.06);
+  color:inherit;
+  margin-bottom:9px;
 }
 
-.demoForm textarea{
-min-height:110px
+.demo-form textarea{
+  min-height:115px;
 }
 
-.demoForm button{
-border:0
+.demo-form button{
+  border:0;
 }
 
-.demoFooter{
-padding:27px 0;
-background:rgba(0,0,0,.11);
-font-size:.75rem;
-opacity:.72
+.demo-message{
+  margin-top:5px;
+  font-size:.72rem;
+  opacity:.65;
 }
 
-.credit{
-font-size:.68rem;
-opacity:.58;
-margin-top:8px
+.demo-footer{
+  padding:28px 0;
+  background:rgba(0,0,0,.11);
+  font-size:.75rem;
+  opacity:.75;
 }
 
-/* =========================================================
-   DISTINCT DEMO THEMES
-========================================================= */
+/* DEMO THEMES */
 
-.auto{
-background:#f5f3ef;
-color:#213746
+.auto-demo{
+  background:#f7f4ef;
+  color:#203443;
 }
 
-.auto .dark,
-.auto .demoHero{
-background:#213746;
-color:#fff
+.auto-demo .demo-hero,
+.auto-demo .dark{
+  background:#203443;
+  color:#fff;
 }
 
-.food{
-background:#fff8f2;
-color:#42261c
+.food-demo{
+  background:#fff8f1;
+  color:#42261d;
 }
 
-.food .dark,
-.food .demoHero{
-background:#702f20;
-color:#fff
+.food-demo .demo-hero,
+.food-demo .dark{
+  background:#702f20;
+  color:#fff;
 }
 
-.industrial{
-background:#f3f6f8;
-color:#182c3b
+.industrial-demo{
+  background:#f3f6f8;
+  color:#172b3b;
 }
 
-.industrial .dark,
-.industrial .demoHero{
-background:#173d56;
-color:#fff
+.industrial-demo .demo-hero,
+.industrial-demo .dark{
+  background:#173d56;
+  color:#fff;
 }
 
-.education{
-background:#f4f8f5;
-color:#20352d
+.education-demo{
+  background:#f4f8f5;
+  color:#20362d;
 }
 
-.education .dark,
-.education .demoHero{
-background:#205845;
-color:#fff
+.education-demo .demo-hero,
+.education-demo .dark{
+  background:#205846;
+  color:#fff;
 }
 
 .chip{
-display:inline-block;
-padding:6px 9px;
-border-radius:999px;
-font-size:.68rem;
-font-weight:900;
-letter-spacing:.07em;
-background:#f0ded4;
-color:#8f4f37
+  display:inline-block;
+  padding:6px 9px;
+  border-radius:999px;
+  font-size:.67rem;
+  font-weight:900;
+  letter-spacing:.06em;
+  background:#f4ddd2;
+  color:#8a462a;
 }
 
-.auto .chip{
-background:#efdcd0;
-color:#8f4f37
-}
+/* MOBILE */
 
-.food .chip{
-background:#f3ded4;
-color:#733622
-}
+@media(max-width:980px){
 
-.industrial .chip{
-background:#dae8ef;
-color:#255b77
-}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:14px;
+    right:14px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:8px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    box-shadow:var(--shadow);
+  }
 
-.education .chip{
-background:#dcece4;
-color:#256851
-}
+  .nav-links.open{
+    display:flex;
+  }
 
-/* RESPONSIVE */
+  .nav-links a{
+    padding:10px;
+  }
 
-@media(max-width:950px){
+  .menu{
+    display:grid;
+    place-items:center;
+  }
 
-.navLinks{
-display:none;
-position:absolute;
-top:73px;
-left:14px;
-right:14px;
-background:#fff;
-border:1px solid var(--line);
-border-radius:14px;
-padding:8px;
-box-shadow:var(--shadow);
-flex-direction:column;
-align-items:stretch;
-gap:0
-}
+  .hero-grid,
+  .why-grid,
+  .about-grid,
+  .contact-grid,
+  .demo-hero,
+  .demo-contact{
+    grid-template-columns:1fr;
+  }
 
-.navLinks.open{
-display:flex
-}
+  .service-grid,
+  .process,
+  .value-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-.navLinks a{
-padding:10px
-}
+  .work-grid{
+    grid-template-columns:1fr;
+  }
 
-.menu{
-display:block
-}
+  .banner{
+    grid-template-columns:1fr;
+  }
 
-.heroGrid,
-.whyGrid,
-.aboutGrid,
-.contactGrid,
-.demoHero,
-.demoContact{
-grid-template-columns:1fr
-}
+  .demo-cards{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-.heroVisual{
-min-height:390px
-}
-
-.services,
-.process,
-.valueGrid{
-grid-template-columns:repeat(2,1fr)
-}
-
-.workGrid{
-grid-template-columns:1fr
-}
-
-.demoPhoto{
-height:300px
-}
-
-.demoCards{
-grid-template-columns:repeat(2,1fr)
-}
-
+  .demo-photo{
+    height:290px;
+  }
 }
 
 @media(max-width:650px){
 
-.wrap,
-.demoInner{
-width:calc(100% - 28px)
-}
+  .container,
+  .demo-container{
+    width:calc(100% - 28px);
+  }
 
-section.section{
-padding:70px 0
-}
+  .hero{
+    padding:62px 0 48px;
+  }
 
-.hero{
-padding:65px 0 48px
-}
+  .hero h1{
+    font-size:clamp(2.6rem,12vw,4rem);
+  }
 
-.hero h1{
-font-size:clamp(2.6rem,12vw,4rem)
-}
+  .hero-art{
+    display:none;
+  }
 
-.heroVisual{
-display:none
-}
+  .service-grid,
+  .process,
+  .value-grid,
+  .reason-grid,
+  .demo-cards{
+    grid-template-columns:1fr;
+  }
 
-.services,
-.process,
-.valueGrid,
-.reasons,
-.demoCards{
-grid-template-columns:1fr
-}
+  .form-grid{
+    grid-template-columns:1fr;
+  }
 
-.workIntro{
-display:block
-}
+  .field.full{
+    grid-column:auto;
+  }
 
-.showroomNote{
-text-align:left;
-margin-top:10px
-}
+  .support-grid{
+    grid-template-columns:1fr;
+  }
 
-.banner{
-grid-template-columns:1fr;
-padding:25px
-}
+  .demo-links{
+    display:none;
+  }
 
-.formGrid{
-grid-template-columns:1fr
-}
+  .demo-nav{
+    justify-content:center;
+  }
 
-.field.full{
-grid-column:auto
-}
+  .demo-hero{
+    padding:45px 0 52px;
+  }
 
-.gallery{
-grid-template-columns:1fr;
-grid-template-rows:220px 170px 170px
-}
+  .demo-photo{
+    height:225px;
+  }
 
-.gallery .big{
-grid-row:auto
-}
+  .demo-gallery{
+    grid-template-columns:1fr;
+    grid-template-rows:220px 170px 170px;
+  }
 
-.demoLinks{
-display:none
-}
+  .demo-gallery .big{
+    grid-row:auto;
+  }
 
-.demoNav{
-justify-content:center
-}
-
-.demoHero{
-padding:45px 0 52px
-}
-
-.demoPhoto{
-height:230px
-}
-
-.footer{
-flex-direction:column
-}
+  .footer{
+    flex-direction:column;
+  }
 
 }
 </style>
@@ -1353,536 +1319,261 @@ flex-direction:column
 
 <body>
 
-<header>
-<div class="wrap nav">
+<header class="site-header">
+  <div class="container nav">
 
-<a class="brand" href="#home">
-<span class="brandMark">NW</span>
-<span>NICHOLAS WAWERU</span>
-</a>
+    <a class="brand" href="#home">
+      <span class="brand-mark">NW</span>
+      NICHOLAS WAWERU
+    </a>
 
-<nav class="navLinks" id="navLinks" aria-label="Primary navigation">
-<a href="#why">Why a website</a>
-<a href="#work">Work</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a class="navCta" href="#contact">Get in touch</a>
-</nav>
+    <nav class="nav-links" id="navLinks">
+      <a href="#why">Why a website</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </nav>
 
-<button
-class="menu"
-id="menuBtn"
-aria-label="Open menu"
-aria-expanded="false">
-☰
-</button>
+    <button
+      class="menu"
+      id="menuBtn"
+      aria-label="Open menu"
+      aria-expanded="false">
+      ☰
+    </button>
 
-</div>
+  </div>
 </header>
 
-<main id="home">
+<main>
 
 <!-- HERO -->
 
-<section class="hero">
-<div class="wrap heroGrid">
+<section class="hero" id="home">
+  <div class="container hero-grid">
 
-<div>
+    <div>
 
-<span class="eyebrow">
-Web Developer • Nairobi, Kenya
-</span>
+      <span class="eyebrow">
+        WEB DEVELOPER • NAIROBI, KENYA
+      </span>
 
-<h1>
-WEBSITES & DIGITAL PLATFORMS THAT
-<span>HELP BUSINESSES GROW.</span>
-</h1>
+      <h1>
+        WEBSITES & DIGITAL PLATFORMS THAT
+        <span>HELP BUSINESSES GROW.</span>
+      </h1>
 
-<p class="lead">
-I build practical online platforms that help businesses reach more people,
-present what they offer clearly, build trust and make it easier for customers
-to take action.
-</p>
+      <p class="hero-lead">
+        I build practical online platforms that help businesses
+        reach more people, present what they offer clearly,
+        build trust and make it easier for customers to take action.
+      </p>
 
-<div class="meta">
-<span>Nairobi, Kenya</span>
-<span>Available for freelance projects</span>
-<span>Websites • Fixes • Growth</span>
-</div>
+      <div class="hero-meta">
+        <span class="meta">Nairobi, Kenya</span>
+        <span class="meta">Available for freelance projects</span>
+        <span class="meta">Websites • Fixes • Updates</span>
+      </div>
 
-<div class="actions">
-<a class="btn primary" href="#work">
-VIEW MY WORK ↗
-</a>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">
+          VIEW MY WORK ↗
+        </a>
 
-<a class="btn secondary" href="#contact">
-GET IN TOUCH
-</a>
-</div>
+        <a class="btn btn-secondary" href="#contact">
+          GET IN TOUCH
+        </a>
+      </div>
 
-</div>
+    </div>
 
-<div class="heroVisual" aria-label="Web development visual">
+    <div class="hero-art">
 
-<div class="screen">
+      <div class="browser">
 
-<div class="screenTop">
-<span class="dot"></span>
-<span class="dot"></span>
-<span class="dot"></span>
-</div>
+        <div class="browser-top">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
 
-<div class="screenBody">
+        <div class="browser-code">
 
-<div>
-<span class="dim">01</span>
-<span class="orange">&lt;business-platform&gt;</span>
-</div>
+          <div>
+            <span class="orange">&lt;business-platform&gt;</span>
+          </div>
 
-<div>
-<span class="dim">02</span>
-&nbsp;&nbsp;
-<span class="green">reach</span> =
-<span class="blue">"more people"</span>;
-</div>
+          <div>
+            <span class="dim">01</span>
+            &nbsp;
+            <span class="green">reach</span> =
+            <span class="blue">"more people"</span>;
+          </div>
 
-<div>
-<span class="dim">03</span>
-&nbsp;&nbsp;
-<span class="green">visibility</span> =
-<span class="blue">"online"</span>;
-</div>
+          <div>
+            <span class="dim">02</span>
+            &nbsp;
+            <span class="green">visibility</span> =
+            <span class="blue">"online"</span>;
+          </div>
 
-<div>
-<span class="dim">04</span>
-&nbsp;&nbsp;
-<span class="green">contact</span> =
-<span class="blue">"easy"</span>;
-</div>
+          <div>
+            <span class="dim">03</span>
+            &nbsp;
+            <span class="green">trust</span> =
+            <span class="blue">"professional"</span>;
+          </div>
 
-<div>
-<span class="dim">05</span>
-&nbsp;&nbsp;
-<span class="green">mobile</span> =
-<span class="blue">true</span>;
-</div>
+          <div>
+            <span class="dim">04</span>
+            &nbsp;
+            <span class="green">contact</span> =
+            <span class="blue">"easy"</span>;
+          </div>
 
-<div>
-<span class="dim">06</span>
-&nbsp;&nbsp;
-<span class="green">website</span> =
-<span class="blue">"working for business"</span>;
-</div>
+          <div>
+            <span class="dim">05</span>
+            &nbsp;
+            <span class="green">mobile</span> =
+            <span class="blue">true</span>;
+          </div>
 
-<div>
-<span class="dim">07</span>
-<span class="orange">&lt;/business-platform&gt;</span>
-</div>
+          <div>
+            <span class="orange">&lt;/business-platform&gt;</span>
+          </div>
 
-<br>
+          <br>
 
-<div>
-<span class="dim">10</span>
-<span class="green">BUILD.</span>
-</div>
+          <div class="dim">
+            // not just a page
+          </div>
 
-<div>
-<span class="dim">11</span>
-<span class="green">REACH.</span>
-</div>
+          <div class="dim">
+            // a platform for the business
+          </div>
 
-<div>
-<span class="dim">12</span>
-<span class="green">CONNECT.</span>
-</div>
+        </div>
 
-</div>
-</div>
+      </div>
 
-<div class="growth">
-<strong>YOUR ONLINE HOME</strong>
-<small>
-A website can become a platform for your business —
-not just another page on the internet.
-</small>
-</div>
+      <div class="art-card">
+        <strong>YOUR ONLINE HOME</strong>
+        <small>
+          A place customers can discover you,
+          understand what you offer and contact you.
+        </small>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </div>
 </section>
 
-<!-- VALUE STRIP -->
+<!-- VALUE -->
 
-<div class="wrap valueGrid" style="padding-bottom:8px">
+<div class="container value-grid">
 
-<div class="value">
-<strong>BUILD</strong>
-<p>Launch a professional online presence.</p>
-</div>
+  <div class="value-card">
+    <strong>BUILD</strong>
+    <p>Launch a professional online presence.</p>
+  </div>
 
-<div class="value">
-<strong>FIX</strong>
-<p>Repair broken websites and problem areas.</p>
-</div>
+  <div class="value-card">
+    <strong>FIX</strong>
+    <p>Repair broken or unfinished websites.</p>
+  </div>
 
-<div class="value">
-<strong>IMPROVE</strong>
-<p>Make an existing site clearer and easier to use.</p>
-</div>
+  <div class="value-card">
+    <strong>IMPROVE</strong>
+    <p>Make an existing site clearer and easier to use.</p>
+  </div>
 
-<div class="value">
-<strong>CONNECT</strong>
-<p>Make it easy to call, message or find you.</p>
-</div>
+  <div class="value-card">
+    <strong>CONNECT</strong>
+    <p>Bring customers to WhatsApp, phone, maps and email.</p>
+  </div>
 
 </div>
 
 <!-- WHY WEBSITE -->
 
-<section class="section why" id="why">
-
-<div class="wrap whyGrid">
-
-<div>
-
-<span class="eyebrow">
-Why your business needs a website
-</span>
-
-<h2 class="statement" style="margin-top:16px">
-A website is more than a
-<span>pretty page.</span>
-</h2>
-
-<p class="copy">
-Your business needs a place where people can discover you,
-understand what you offer, see why they should trust you and know exactly
-how to contact you.
-</p>
-
-</div>
-
-<div class="reasons">
-
-<article class="reason">
-<div class="reasonNum">01</div>
-<h3>Be easier to find</h3>
-<p>
-Give customers a proper place to discover your business online.
-</p>
-</article>
-
-<article class="reason">
-<div class="reasonNum">02</div>
-<h3>Reach a wider audience</h3>
-<p>
-Show your business to people beyond the customers who already know you.
-</p>
-</article>
-
-<article class="reason">
-<div class="reasonNum">03</div>
-<h3>Build credibility</h3>
-<p>
-Present your services, location, work and contact details professionally.
-</p>
-</article>
-
-<article class="reason">
-<div class="reasonNum">04</div>
-<h3>Make contact easy</h3>
-<p>
-Connect people directly to WhatsApp, phone, email, forms and maps.
-</p>
-</article>
-
-<article class="reason">
-<div class="reasonNum">05</div>
-<h3>Show what you actually do</h3>
-<p>
-Use pages, images, menus, products, courses or portfolios to explain the offer.
-</p>
-</article>
-
-<article class="reason">
-<div class="reasonNum">06</div>
-<h3>Have your own online home</h3>
-<p>
-Social media is useful, but your website gives the business a place of its own.
-</p>
-</article>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MAIN SHOWROOM -->
-
-<section class="section" id="work">
-
-<div class="wrap">
-
-<div class="workIntro">
-
-<div class="heading">
-
-<span class="eyebrow">
-MAIN OBJECTIVE • DEMO SHOWROOM
-</span>
-
-<h2>
-Don’t just read about what I can build.
-Open the websites.
-</h2>
-
-<p>
-Each card below opens a complete mini-site built inside this same portfolio.
-They are fictional demos designed to show how I would approach different
-types of Kenyan businesses.
-</p>
-
-</div>
-
-<p class="showroomNote">
-The demos are the main showcase:
-navigation, sections, CTAs, forms, galleries, mobile layout and
-business-specific content are all included.
-</p>
-
-</div>
-
-<div class="workGrid">
-
-<!-- AUTO CARD -->
-
-<article class="project">
-
-<div class="projectImg">
-
-<img
-src="https://sicheyautomotive.com/images/main-slider/image-5.jpg"
-alt="Vehicle repair workshop reference"
-loading="lazy"
-referrerpolicy="no-referrer">
-
-<div class="projectShade">
-
-<div>
-
-<span class="tag">
-DEMO PROJECT
-</span>
-
-<h3>
-Kibera Autocare Centre
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="projectBody">
-
-<div class="projectMeta">
-<span>Nairobi, Kenya</span>
-<span>Automotive</span>
-</div>
-
-<p>
-Garage platform with services, workshop imagery, calls to action,
-directions, WhatsApp and customer enquiries.
-</p>
-
-<button
-class="btn primary openDemo"
-data-demo="auto">
-OPEN FULL DEMO ↗
-</button>
-
-<div class="note">
-Fictional business. Demonstration only.
-</div>
-
-</div>
-
-</article>
-
-<!-- FOOD CARD -->
-
-<article class="project">
-
-<div class="projectImg">
-
-<img
-src="https://lp-cms-production.imgix.net/2024-09/Nairobi-cafe-WASP-AND-SPROUT-5ba5035022d1.jpeg?auto=format&fit=crop&q=75&w=1600"
-alt="Nairobi cafe reference image"
-loading="lazy"
-referrerpolicy="no-referrer">
-
-<div class="projectShade">
-
-<div>
-
-<span class="tag">
-DEMO PROJECT
-</span>
-
-<h3>
-Thika Fresh Bites
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="projectBody">
-
-<div class="projectMeta">
-<span>Thika, Kenya</span>
-<span>Restaurant</span>
-</div>
-
-<p>
-Restaurant platform with menu, sample KSh prices, specials,
-visual food content, WhatsApp ordering and directions.
-</p>
-
-<button
-class="btn primary openDemo"
-data-demo="food">
-OPEN FULL DEMO ↗
-</button>
-
-<div class="note">
-Fictional business. Demonstration only.
-</div>
-
-</div>
-
-</article>
-
-<!-- INDUSTRIAL CARD -->
-
-<article class="project">
-
-<div class="projectImg">
-
-<img
-src="https://propscout.co.ke/storage/properties/files/godown-for-sale-in-industrial-area-pqqcq.jpg"
-alt="Industrial warehouse in Nairobi reference image"
-loading="lazy"
-referrerpolicy="no-referrer">
-
-<div class="projectShade">
-
-<div>
-
-<span class="tag">
-DEMO PROJECT
-</span>
-
-<h3>
-Rift Valley Industrial Solutions
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="projectBody">
-
-<div class="projectMeta">
-<span>Nairobi, Kenya</span>
-<span>Industrial / B2B</span>
-</div>
-
-<p>
-Corporate industrial platform with equipment categories,
-maintenance, spare parts, inspections and quote enquiries.
-</p>
-
-<button
-class="btn primary openDemo"
-data-demo="industrial">
-OPEN FULL DEMO ↗
-</button>
-
-<div class="note">
-Fictional business. Demonstration only.
-</div>
-
-</div>
-
-</article>
-
-<!-- EDUCATION CARD -->
-
-<article class="project">
-
-<div class="projectImg">
-
-<img
-src="https://images.squarespace-cdn.com/content/v1/665d881bda52dc4de2ae1648/1717405731325-XTZNTOIO5TBX0SOXZEWR/DSC_2266.jpg"
-alt="Technical students workshop reference image"
-loading="lazy"
-referrerpolicy="no-referrer">
-
-<div class="projectShade">
-
-<div>
-
-<span class="tag">
-DEMO PROJECT
-</span>
-
-<h3>
-Mathare Technical Skills Centre
-</h3>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="projectBody">
-
-<div class="projectMeta">
-<span>Nairobi, Kenya</span>
-<span>Training Centre</span>
-</div>
-
-<p>
-Training website with courses, admissions, facilities,
-practical learning imagery and enquiries.
-</p>
-
-<button
-class="btn primary openDemo"
-data-demo="education">
-OPEN FULL DEMO ↗
-</button>
-
-<div class="note">
-Fictional institution. Demonstration only.
-</div>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
+<section class="section why-section" id="why">
+
+  <div class="container why-grid">
+
+    <div>
+
+      <span class="eyebrow">
+        WHY YOUR BUSINESS NEEDS A WEBSITE
+      </span>
+
+      <h2 class="big-statement" style="margin-top:16px">
+        Your business should not depend only on
+        <span>word of mouth.</span>
+      </h2>
+
+      <p class="why-copy">
+        A website gives your business a proper home online.
+        People can discover you, understand your services,
+        see what you offer and know exactly how to contact you.
+      </p>
+
+    </div>
+
+    <div class="reason-grid">
+
+      <article class="reason">
+        <div class="reason-num">01</div>
+        <h3>Be easier to find</h3>
+        <p>
+          Give customers a clear place to discover the business online.
+        </p>
+      </article>
+
+      <article class="reason">
+        <div class="reason-num">02</div>
+        <h3>Reach more people</h3>
+        <p>
+          Show your products and services beyond your immediate area.
+        </p>
+      </article>
+
+      <article class="reason">
+        <div class="reason-num">03</div>
+        <h3>Build credibility</h3>
+        <p>
+          Present your business professionally before the customer calls.
+        </p>
+      </article>
+
+      <article class="reason">
+        <div class="reason-num">04</div>
+        <h3>Make contact easy</h3>
+        <p>
+          Connect people to WhatsApp, phone, email, forms and maps.
+        </p>
+      </article>
+
+      <article class="reason">
+        <div class="reason-num">05</div>
+        <h3>Show what you do</h3>
+        <p>
+          Use services, menus, products, courses or portfolios to explain the offer.
+        </p>
+      </article>
+
+      <article class="reason">
+        <div class="reason-num">06</div>
+        <h3>Own your online home</h3>
+        <p>
+          Social media is useful, but your website gives the business its own space.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
 
 </section>
 
@@ -1890,94 +1581,324 @@ Fictional institution. Demonstration only.
 
 <section class="section" id="services">
 
-<div class="wrap">
+  <div class="container">
 
-<div class="heading">
+    <div class="section-heading">
 
-<span class="eyebrow">
-SERVICES
-</span>
+      <span class="eyebrow">SERVICES</span>
 
-<h2>
-Web work built around what the business actually needs.
-</h2>
+      <h2>
+        Practical website work for growing businesses.
+      </h2>
 
-<p>
-New websites, repairs, improvements and the practical integrations
-that help customers act.
-</p>
+      <p>
+        New websites, fixes, improvements and the tools that help customers
+        actually connect with the business.
+      </p>
 
-</div>
+    </div>
 
-<div class="services">
+    <div class="service-grid">
 
-<div class="service">
-<div class="serviceIcon">01</div>
-<h3>Website Development</h3>
-<p>
-Professional websites built around the business and its audience.
-</p>
-</div>
+      <article class="service">
+        <div class="service-icon">01</div>
+        <h3>Website Development</h3>
+        <p>Professional websites built around the business.</p>
+      </article>
 
-<div class="service">
-<div class="serviceIcon">02</div>
-<h3>Website Fixes</h3>
-<p>
-Broken buttons, links, layouts, forms and problem areas.
-</p>
-</div>
+      <article class="service">
+        <div class="service-icon">02</div>
+        <h3>Website Fixes</h3>
+        <p>Broken links, buttons, forms and layout problems.</p>
+      </article>
 
-<div class="service">
-<div class="serviceIcon">03</div>
-<h3>Website Updates</h3>
-<p>
-Refresh outdated pages, information, images and services.
-</p>
-</div>
+      <article class="service">
+        <div class="service-icon">03</div>
+        <h3>Website Updates</h3>
+        <p>Refresh old information, images, services and pages.</p>
+      </article>
 
-<div class="service">
-<div class="serviceIcon">04</div>
-<h3>Mobile Responsiveness</h3>
-<p>
-Make the site work properly on phones, tablets and desktops.
-</p>
-</div>
+      <article class="service">
+        <div class="service-icon">04</div>
+        <h3>Mobile Responsiveness</h3>
+        <p>Make the website work properly across screen sizes.</p>
+      </article>
 
-<div class="service">
-<div class="serviceIcon">05</div>
-<h3>Basic SEO & Google Indexing</h3>
-<p>
-Clean page structure, metadata and basic indexing setup.
-</p>
-</div>
+      <article class="service">
+        <div class="service-icon">05</div>
+        <h3>Basic SEO & Google Indexing</h3>
+        <p>Improve structure and basic search visibility.</p>
+      </article>
 
-<div class="service">
-<div class="serviceIcon">06</div>
-<h3>Business Contact Integration</h3>
-<p>
-WhatsApp, phone, email, maps and enquiry pathways.
-</p>
-</div>
+      <article class="service">
+        <div class="service-icon">06</div>
+        <h3>Business Contact Integration</h3>
+        <p>WhatsApp, phone, maps, email and enquiries.</p>
+      </article>
 
-<div class="service">
-<div class="serviceIcon">07</div>
-<h3>Website Maintenance</h3>
-<p>
-Keep important pages, details and links up to date.
-</p>
-</div>
+      <article class="service">
+        <div class="service-icon">07</div>
+        <h3>Website Maintenance</h3>
+        <p>Keep important content and website details current.</p>
+      </article>
 
-<div class="service">
-<div class="serviceIcon">08</div>
-<h3>Website Setup Help</h3>
-<p>
-GitHub Pages, domain setup, deployment and going live.
-</p>
-</div>
+      <article class="service">
+        <div class="service-icon">08</div>
+        <h3>Website Setup Help</h3>
+        <p>GitHub Pages, domains, deployment and going live.</p>
+      </article>
 
-</div>
+    </div>
 
-</div>
+  </div>
+
+</section>
+
+<!-- WORK -->
+
+<section class="section work-section" id="work">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        DEMO SHOWROOM
+      </span>
+
+      <h2>
+        Don't just read about what I can build.
+        Open the websites.
+      </h2>
+
+      <p>
+        These are fictional business demonstrations built inside this portfolio.
+        Each one behaves like a small real website.
+      </p>
+
+    </div>
+
+    <div class="work-grid">
+
+      <!-- AUTO -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mechanic%20working%20in%20Nairobi.jpg"
+            alt="Mechanic working in Nairobi"
+            loading="lazy">
+
+          <div class="project-overlay">
+
+            <div>
+
+              <span class="demo-tag">
+                DEMO PROJECT
+              </span>
+
+              <h3>
+                Kibera Autocare Centre
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-meta">
+            Nairobi, Kenya • Automotive
+          </div>
+
+          <p>
+            Garage website with services, workshop imagery,
+            directions, WhatsApp, calls and customer enquiries.
+          </p>
+
+          <button
+            class="btn btn-primary open-demo"
+            data-demo="auto">
+            OPEN FULL DEMO ↗
+          </button>
+
+          <div class="project-note">
+            Fictional business. Demonstration only.
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- FOOD -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1665400808116-f0e6339b7e9a?auto=format&fit=crop&q=80&w=1600"
+            alt="Kenyan-style food display"
+            loading="lazy">
+
+          <div class="project-overlay">
+
+            <div>
+
+              <span class="demo-tag">
+                DEMO PROJECT
+              </span>
+
+              <h3>
+                Thika Fresh Bites
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-meta">
+            Thika, Kenya • Restaurant
+          </div>
+
+          <p>
+            Restaurant website with menu, KSh prices,
+            food gallery, WhatsApp ordering and directions.
+          </p>
+
+          <button
+            class="btn btn-primary open-demo"
+            data-demo="food">
+            OPEN FULL DEMO ↗
+          </button>
+
+          <div class="project-note">
+            Fictional business. Demonstration only.
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- INDUSTRIAL -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="https://cdn.prod.website-files.com/68491dec0c89cd3226833f4f/68491dec0c89cd322683418c_Newsletter%20Image%2000137.png"
+            alt="Forklift and warehouse operations in Kenya"
+            loading="lazy">
+
+          <div class="project-overlay">
+
+            <div>
+
+              <span class="demo-tag">
+                DEMO PROJECT
+              </span>
+
+              <h3>
+                Rift Valley Industrial Solutions
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-meta">
+            Nairobi, Kenya • Industrial / B2B
+          </div>
+
+          <p>
+            Industrial platform for forklifts, material handling,
+            spare parts, maintenance and quote enquiries.
+          </p>
+
+          <button
+            class="btn btn-primary open-demo"
+            data-demo="industrial">
+            OPEN FULL DEMO ↗
+          </button>
+
+          <div class="project-note">
+            Fictional business. Demonstration only.
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- EDUCATION -->
+
+      <article class="project">
+
+        <div class="project-image">
+
+          <img
+            src="https://back.avsi.org/uploads/st-kizito-scuola-kenya-AVSI-2-1024x683.jpg"
+            alt="Vocational training students in Kenya"
+            loading="lazy">
+
+          <div class="project-overlay">
+
+            <div>
+
+              <span class="demo-tag">
+                DEMO PROJECT
+              </span>
+
+              <h3>
+                Mathare Technical Skills Centre
+              </h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-body">
+
+          <div class="project-meta">
+            Nairobi, Kenya • Training Centre
+          </div>
+
+          <p>
+            Education platform with courses, admissions,
+            facilities, workshop imagery and enquiries.
+          </p>
+
+          <button
+            class="btn btn-primary open-demo"
+            data-demo="education">
+            OPEN FULL DEMO ↗
+          </button>
+
+          <div class="project-note">
+            Fictional institution. Demonstration only.
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
 
 </section>
 
@@ -1985,45 +1906,44 @@ GitHub Pages, domain setup, deployment and going live.
 
 <section class="section">
 
-<div class="wrap">
+  <div class="container">
 
-<div class="banner">
+    <div class="banner">
 
-<div>
+      <div>
 
-<span class="eyebrow">
-ALREADY HAVE A WEBSITE?
-</span>
+        <span class="eyebrow">
+          ALREADY HAVE A WEBSITE?
+        </span>
 
-<h2>
-It may not need to be rebuilt from zero.
-</h2>
+        <h2>
+          It might not need to be rebuilt from zero.
+        </h2>
 
-<p>
-Broken links, poor mobile layout, old content, weak contact options
-or an unfinished setup can often be improved without starting over.
-</p>
+        <p>
+          Broken links, weak mobile layouts, outdated content or poor
+          contact options can often be improved without starting over.
+        </p>
 
-<div class="ticks">
-<span>Broken buttons</span>
-<span>Dead links</span>
-<span>Mobile issues</span>
-<span>Forms</span>
-<span>Old content</span>
-<span>Basic SEO</span>
-<span>Domain setup</span>
-<span>General improvement</span>
-</div>
+        <div class="banner-pills">
+          <span>Broken links</span>
+          <span>Buttons</span>
+          <span>Forms</span>
+          <span>Mobile issues</span>
+          <span>Outdated content</span>
+          <span>SEO</span>
+          <span>Domains</span>
+        </div>
 
-</div>
+      </div>
 
-<a class="btn secondary" href="#contact">
-GET A WEBSITE CHECK
-</a>
+      <a class="btn btn-secondary" href="#contact">
+        GET A WEBSITE CHECK
+      </a>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -2031,81 +1951,57 @@ GET A WEBSITE CHECK
 
 <section class="section">
 
-<div class="wrap">
+  <div class="container">
 
-<div class="heading">
+    <div class="section-heading">
 
-<span class="eyebrow">
-HOW IT WORKS
-</span>
+      <span class="eyebrow">
+        HOW IT WORKS
+      </span>
 
-<h2>
-Simple process. Clear communication.
-</h2>
+      <h2>
+        Simple from first message to launch.
+      </h2>
 
-</div>
+    </div>
 
-<div class="process">
+    <div class="process">
 
-<div class="step">
-<div class="stepNo">
-01 / CONTACT
-</div>
+      <div class="step">
+        <div class="step-no">01 / CONTACT</div>
+        <h3>Tell me what you need</h3>
+        <p>
+          Share the business, website idea or problem.
+        </p>
+      </div>
 
-<h3>
-Tell me what you need
-</h3>
+      <div class="step">
+        <div class="step-no">02 / PLAN</div>
+        <h3>Choose the direction</h3>
+        <p>
+          Decide on pages, priorities and useful actions.
+        </p>
+      </div>
 
-<p>
-Share the business, website idea or problem.
-</p>
-</div>
+      <div class="step">
+        <div class="step-no">03 / BUILD OR FIX</div>
+        <h3>Do the web work</h3>
+        <p>
+          Build the site or improve the parts that matter.
+        </p>
+      </div>
 
-<div class="step">
-<div class="stepNo">
-02 / PLAN
-</div>
+      <div class="step">
+        <div class="step-no">04 / LAUNCH</div>
+        <h3>Get it online</h3>
+        <p>
+          Final checks, launch and practical support.
+        </p>
+      </div>
 
-<h3>
-Choose the direction
-</h3>
+    </div>
 
-<p>
-Agree on pages, priorities and useful actions.
-</p>
-</div>
-
-<div class="step">
-<div class="stepNo">
-03 / BUILD OR FIX
-</div>
-
-<h3>
-Do the web work
-</h3>
-
-<p>
-Build the site or improve the parts that matter.
-</p>
-</div>
-
-<div class="step">
-<div class="stepNo">
-04 / LAUNCH
-</div>
-
-<h3>
-Get it online
-</h3>
-
-<p>
-Final checks, launch and practical support.
-</p>
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
@@ -2113,281 +2009,286 @@ Final checks, launch and practical support.
 
 <section class="section" id="about">
 
-<div class="wrap aboutGrid">
+  <div class="container about-grid">
 
-<article class="aboutCard">
+    <article class="about-card">
 
-<span class="eyebrow">
-ABOUT
-</span>
+      <span class="eyebrow">ABOUT</span>
 
-<h3>
-Nicholas Waweru
-</h3>
+      <h3>
+        Nicholas Waweru
+      </h3>
 
-<p>
-I am Nicholas Waweru, a web developer based in Nairobi, Kenya.
-</p>
+      <p>
+        I am Nicholas Waweru, a web developer based in Nairobi, Kenya.
+      </p>
 
-<p>
-I build practical websites for businesses and organizations and
-continuously develop my skills in web development.
-</p>
+      <p>
+        I build practical websites for businesses and organizations
+        and continuously develop my skills in web development.
+      </p>
 
-<p>
-My focus is creating websites that look professional, work properly
-across devices and make it easy for customers to contact a business.
-</p>
+      <p>
+        My focus is creating websites that look professional,
+        work properly across devices and make it easy for customers
+        to contact a business.
+      </p>
 
-</article>
+    </article>
 
-<article class="skillsCard">
+    <article class="skills-card">
 
-<span class="eyebrow">
-SKILLS
-</span>
+      <span class="eyebrow">SKILLS</span>
 
-<h3>
-Tools & capabilities
-</h3>
+      <h3>
+        Tools & capabilities
+      </h3>
 
-<div class="skills">
+      <div class="skills">
 
-<span class="skill">HTML</span>
-<span class="skill">CSS</span>
-<span class="skill">JavaScript</span>
-<span class="skill">GitHub</span>
-<span class="skill">GitHub Pages</span>
-<span class="skill">Responsive Web Design</span>
-<span class="skill">Basic SEO</span>
-<span class="skill">Website Troubleshooting</span>
-<span class="skill">Google Maps Integration</span>
-<span class="skill">WhatsApp Integration</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">GitHub Pages</span>
+        <span class="skill">Responsive Web Design</span>
+        <span class="skill">Basic SEO</span>
+        <span class="skill">Website Troubleshooting</span>
+        <span class="skill">Google Maps Integration</span>
+        <span class="skill">WhatsApp Integration</span>
 
-</div>
+      </div>
 
-<div class="support">
+      <div class="support-grid">
 
-<div class="supportBox">
-<strong>Personal Attention</strong>
-<span>Direct communication</span>
-</div>
+        <div class="support">
+          <strong>Personal Attention</strong>
+          <small>Direct communication</small>
+        </div>
 
-<div class="supportBox">
-<strong>Practical Solutions</strong>
-<span>Useful outcomes</span>
-</div>
+        <div class="support">
+          <strong>Practical Solutions</strong>
+          <small>Useful outcomes</small>
+        </div>
 
-<div class="supportBox">
-<strong>Mobile Friendly</strong>
-<span>Smaller screens matter</span>
-</div>
+        <div class="support">
+          <strong>Mobile Friendly</strong>
+          <small>Smaller screens matter</small>
+        </div>
 
-<div class="supportBox">
-<strong>Ongoing Support</strong>
-<span>Updates after launch</span>
-</div>
+        <div class="support">
+          <strong>Ongoing Support</strong>
+          <small>Updates after launch</small>
+        </div>
 
-</div>
+      </div>
 
-</article>
+    </article>
 
-</div>
+  </div>
 
 </section>
 
 <!-- CONTACT -->
 
-<section class="section contact" id="contact">
+<section class="section contact-section" id="contact">
 
-<div class="wrap contactGrid">
+  <div class="container contact-grid">
 
-<div>
+    <div class="contact-copy">
 
-<span class="eyebrow">
-GET IN TOUCH
-</span>
+      <span class="eyebrow">
+        GET IN TOUCH
+      </span>
 
-<h2>
-Let's build something useful for your business.
-</h2>
+      <h2 class="contact-title">
+        Let's build something useful for your business.
+      </h2>
 
-<p>
-Tell me what your business does, what you want the website to achieve
-and what needs fixing or improving.
-</p>
+      <p>
+        Tell me what your business does, what you want the website
+        to achieve and what needs to be fixed or improved.
+      </p>
 
-<div class="contactDetails">
+      <div class="contact-details">
 
-<div class="contactItem">
-<small>Location</small>
-<strong>
-Nairobi, Kenya
-</strong>
-</div>
+        <a
+          class="contact-item"
+          href="mailto:nicholaskanyi00@gmail.com">
 
-<a
-class="contactItem"
-href="mailto:nicholaskanyi00@gmail.com">
+          <strong>Email</strong>
+          <span>nicholaskanyi00@gmail.com</span>
 
-<small>Email</small>
+        </a>
 
-<strong>
-nicholaskanyi00@gmail.com
-</strong>
+        <a
+          class="contact-item"
+          href="https://wa.me/254708624297"
+          target="_blank"
+          rel="noopener">
 
-</a>
+          <strong>WhatsApp</strong>
+          <span>0708624297</span>
 
-<a
-class="contactItem"
-href="https://wa.me/254708624297"
-target="_blank"
-rel="noopener">
+        </a>
 
-<small>WhatsApp</small>
+        <a
+          class="contact-item"
+          href="tel:0708624297">
 
-<strong>
-0708624297
-</strong>
+          <strong>Phone</strong>
+          <span>0708624297</span>
 
-</a>
+        </a>
 
-</div>
+        <div class="contact-item">
 
-</div>
+          <strong>Location</strong>
+          <span>Nairobi, Kenya</span>
 
-<form
-class="form"
-id="contactForm">
+        </div>
 
-<div class="formGrid">
+      </div>
 
-<div class="field">
-<label for="name">
-Name
-</label>
+    </div>
 
-<input
-id="name"
-name="name"
-required
-placeholder="Your name">
-</div>
+    <form
+      class="contact-form"
+      id="mainContactForm">
 
-<div class="field">
-<label for="business">
-Business
-</label>
+      <div class="form-grid">
 
-<input
-id="business"
-name="business"
-required
-placeholder="Business / organisation">
-</div>
+        <div class="field">
 
-<div class="field">
-<label for="email">
-Email
-</label>
+          <label for="mainName">
+            Name
+          </label>
 
-<input
-id="email"
-name="email"
-type="email"
-required
-placeholder="you@example.com">
-</div>
+          <input
+            id="mainName"
+            name="name"
+            required
+            placeholder="Your name">
 
-<div class="field">
+        </div>
 
-<label for="need">
-What do you need?
-</label>
+        <div class="field">
 
-<select
-id="need"
-name="need"
-required>
+          <label for="mainBusiness">
+            Business / organisation
+          </label>
 
-<option value="">
-Choose one
-</option>
+          <input
+            id="mainBusiness"
+            name="business"
+            required
+            placeholder="Business or organisation">
 
-<option>
-New website
-</option>
+        </div>
 
-<option>
-Website fixes
-</option>
+        <div class="field">
 
-<option>
-Website updates
-</option>
+          <label for="mainEmail">
+            Your email
+          </label>
 
-<option>
-Mobile responsiveness
-</option>
+          <input
+            id="mainEmail"
+            name="email"
+            type="email"
+            required
+            placeholder="you@example.com">
 
-<option>
-Basic SEO / indexing
-</option>
+        </div>
 
-<option>
-WhatsApp / Maps / contact integration
-</option>
+        <div class="field">
 
-<option>
-Website maintenance
-</option>
+          <label for="mainNeed">
+            What do you need?
+          </label>
 
-<option>
-Other
-</option>
+          <select
+            id="mainNeed"
+            name="need"
+            required>
 
-</select>
+            <option value="">
+              Choose one
+            </option>
 
-</div>
+            <option>
+              New website
+            </option>
 
-<div class="field full">
+            <option>
+              Website fixes
+            </option>
 
-<label for="message">
-Message
-</label>
+            <option>
+              Website updates
+            </option>
 
-<textarea
-id="message"
-name="message"
-required
-placeholder="Tell me what you need...">
-</textarea>
+            <option>
+              Mobile responsiveness
+            </option>
 
-</div>
+            <option>
+              Basic SEO / Google indexing
+            </option>
 
-</div>
+            <option>
+              WhatsApp / Maps / contact integration
+            </option>
 
-<button
-class="btn primary"
-type="submit"
-style="margin-top:12px">
+            <option>
+              Website maintenance
+            </option>
 
-PREPARE ENQUIRY EMAIL ↗
+            <option>
+              Other
+            </option>
 
-</button>
+          </select>
 
-<div class="formHelp">
-This GitHub Pages site uses your email app rather than pretending to have a backend.
-</div>
+        </div>
 
-<div
-class="status"
-id="status">
-</div>
+        <div class="field full">
 
-</form>
+          <label for="mainMessage">
+            Message
+          </label>
 
-</div>
+          <textarea
+            id="mainMessage"
+            name="message"
+            required
+            placeholder="Tell me what you need..."></textarea>
+
+        </div>
+
+      </div>
+
+      <button
+        class="btn btn-primary"
+        type="submit"
+        style="margin-top:13px">
+
+        SEND ENQUIRY →
+
+      </button>
+
+      <div class="form-note">
+        Your enquiry is sent directly to Nicholas's email.
+      </div>
+
+      <div
+        class="form-status"
+        id="mainStatus"
+        role="status"></div>
+
+    </form>
+
+  </div>
 
 </section>
 
@@ -2395,1846 +2296,1944 @@ id="status">
 
 <footer>
 
-<div class="wrap footer">
+  <div class="container footer">
 
-<div>
-<strong>NICHOLAS WAWERU</strong>
-WEB DEVELOPER • NAIROBI, KENYA
-</div>
+    <div>
+      <strong>NICHOLAS WAWERU</strong>
+      <span>
+        WEB DEVELOPER • Nairobi, Kenya
+      </span>
+    </div>
 
-<div>
-Websites • Fixes • Updates • Online Presence
-</div>
+    <div>
+      <span>
+        Websites • Fixes • Updates • Online Presence
+      </span>
+    </div>
 
-<div>
-© <span id="year"></span> Nicholas Waweru
-</div>
+    <div>
+      <span>
+        © <span id="year"></span> Nicholas Waweru
+      </span>
+    </div>
 
-</div>
+  </div>
 
 </footer>
 
 <button
-class="top"
-id="topBtn"
-aria-label="Back to top">
-
-↑
-
+  class="top"
+  id="topBtn"
+  aria-label="Back to top">
+  ↑
 </button>
 
-<!-- =========================================================
-     FOUR COMPLETE MINI-SITES
-========================================================= -->
+<!-- ==================================================
+     FULL DEMO VIEWER
+================================================== -->
 
 <div
-class="viewer"
-id="viewer"
-aria-hidden="true">
+  class="demo-viewer"
+  id="demoViewer"
+  aria-hidden="true">
 
-<div class="viewerBar">
+  <div class="viewer-bar">
 
-<div>
+    <div>
+      <div
+        class="viewer-title"
+        id="viewerTitle">
+        Demo Project
+      </div>
 
-<div
-class="viewerTitle"
-id="viewerTitle">
-Demo Project
-</div>
+      <span class="viewer-subtitle">
+        Fictional portfolio demonstration
+      </span>
+    </div>
 
-<div class="viewerTitle">
-<small>
-Fictional demo • built inside the portfolio
-</small>
-</div>
+    <button
+      class="back-demo"
+      id="backDemo"
+      type="button">
 
-</div>
+      ← BACK TO PORTFOLIO
 
-<button
-class="backBtn"
-id="backBtn"
-type="button">
+    </button>
 
-← BACK TO PORTFOLIO
+  </div>
 
-</button>
+  <!-- ==================================================
+       KIBERA AUTOCARE
+  ================================================== -->
 
-</div>
+  <article
+    class="demo-site auto-demo"
+    id="demo-auto">
 
-<!-- =====================================================
-     DEMO 1 — KIBERA AUTOCARE CENTRE
-===================================================== -->
+    <div class="dark">
 
-<article
-class="demo auto"
-id="demoAuto">
+      <div class="demo-container">
 
-<div class="dark">
+        <div class="demo-nav">
 
-<div class="demoInner">
+          <div class="demo-logo">
+            KIBERA AUTOCARE CENTRE
+          </div>
 
-<div class="demoNav">
+          <div class="demo-links">
 
-<div class="demoLogo">
-KIBERA AUTOCARE CENTRE
-</div>
+            <a href="#auto-home">Home</a>
+            <a href="#auto-services">Services</a>
+            <a href="#auto-gallery">Gallery</a>
+            <a href="#auto-contact">Contact</a>
 
-<div class="demoLinks">
+          </div>
 
-<a href="#autoHome">
-Home
-</a>
+        </div>
 
-<a href="#autoServices">
-Services
-</a>
+      </div>
 
-<a href="#autoGallery">
-Gallery
-</a>
+    </div>
 
-<a href="#autoContact">
-Contact
-</a>
+    <section
+      class="demo-hero dark"
+      id="auto-home">
 
-</div>
+      <div class="demo-container" style="display:contents">
 
-</div>
+        <div>
 
-</div>
+          <span class="chip">
+            NAIROBI • AUTOMOTIVE
+          </span>
 
-</div>
+          <h1>
+            KEEP YOUR CAR MOVING.
+          </h1>
 
-<section
-class="demoHero"
-id="autoHome">
+          <p>
+            Reliable vehicle care for everyday drivers and business fleets,
+            from diagnostics and engine work to brakes, suspension and
+            preventive maintenance.
+          </p>
 
-<div
-class="demoInner"
-style="display:contents">
+          <div class="demo-actions">
 
-<div>
+            <a
+              class="demo-btn light"
+              href="tel:0708624297">
+              CALL NOW
+            </a>
 
-<span class="chip">
-NAIROBI • AUTOMOTIVE
-</span>
+            <a
+              class="demo-btn outline"
+              href="https://wa.me/254708624297?text=Hi%20Nicholas%2C%20I%20saw%20the%20Kibera%20Autocare%20demo"
+              target="_blank"
+              rel="noopener">
+              WHATSAPP
+            </a>
 
-<h1>
-KEEP YOUR CAR MOVING.
-</h1>
+            <a
+              class="demo-btn outline"
+              href="https://www.google.com/maps/search/?api=1&query=Kibera%2C%20Nairobi%2C%20Kenya"
+              target="_blank"
+              rel="noopener">
+              GET DIRECTIONS
+            </a>
 
-<p>
-Reliable vehicle care for everyday drivers and business fleets,
-from diagnostics and engine work to brakes, suspension and
-preventive maintenance.
-</p>
+          </div>
+
+        </div>
 
-<div class="demoActions">
+        <div class="demo-photo">
 
-<a
-class="demoBtn light"
-href="tel:0708624297">
-CALL NOW
-</a>
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mechanic%20working%20in%20Nairobi.jpg"
+            alt="Mechanic working in Nairobi">
 
-<a
-class="demoBtn ghost"
-href="https://wa.me/254708624297?text=Hi%20Kibera%20Autocare"
-target="_blank"
-rel="noopener">
-WHATSAPP US
-</a>
+        </div>
 
-<a
-class="demoBtn ghost"
-href="https://maps.google.com/?q=Kibera+Nairobi+Kenya"
-target="_blank"
-rel="noopener">
-GET DIRECTIONS
-</a>
-
-</div>
-
-</div>
-
-<div class="demoPhoto">
-
-<img
-src="https://sicheyautomotive.com/images/main-slider/image-5.jpg"
-alt="Vehicle workshop reference image"
-referrerpolicy="no-referrer">
-
-</div>
-
-</div>
-
-</section>
-
-<section class="demoSection">
-
-<div class="demoInner">
-
-<span class="chip">
-ABOUT
-</span>
-
-<h2>
-Practical repairs. Clear communication.
-</h2>
-
-<p>
-A fictional local garage concept showing how a business can explain
-its capability and make it simple for customers to contact the workshop.
-</p>
-
-<div class="demoCards">
-
-<div class="demoCard">
-<h3>
-Diagnostics
-</h3>
-<p>
-Identify faults before repair work begins.
-</p>
-</div>
-
-<div class="demoCard">
-<h3>
-Maintenance
-</h3>
-<p>
-Routine service, oil, filters, brakes and checks.
-</p>
-</div>
-
-<div class="demoCard">
-<h3>
-Fleet support
-</h3>
-<p>
-Planned maintenance for business vehicles.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section
-class="demoSection dark"
-id="autoServices">
-
-<div class="demoInner">
-
-<span class="chip">
-SERVICES
-</span>
-
-<h2>
-Garage services customers can understand quickly.
-</h2>
-
-<div class="demoCards">
-
-<div class="demoCard">
-<h3>
-Vehicle Diagnostics
-</h3>
-<p>
-Fault scanning and troubleshooting.
-</p>
-</div>
-
-<div class="demoCard">
-<h3>
-Engine Repair
-</h3>
-<p>
-Inspection and mechanical repair work.
-</p>
-</div>
-
-<div class="demoCard">
-<h3>
-Brake Service
-</h3>
-<p>
-Brake checks, pads, discs and fluid.
-</p>
-</div>
-
-<div class="demoCard">
-<h3>
-Suspension
-</h3>
-<p>
-Checks for worn components and handling problems.
-</p>
-</div>
-
-<div class="demoCard">
-<h3>
-Oil & Filter Service
-</h3>
-<p>
-Routine servicing for daily vehicle use.
-</p>
-</div>
-
-<div class="demoCard">
-<h3>
-Electrical Diagnostics
-</h3>
-<p>
-Battery, charging, wiring and starting-system checks.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section
-class="demoSection"
-id="autoGallery">
-
-<div class="demoInner">
+      </div>
 
-<span class="chip">
-GALLERY
-</span>
+    </section>
 
-<h2>
-Real workshop-style imagery.
-</h2>
+    <section class="demo-section" id="auto-services">
 
-<p>
-Local-looking photography helps a service business feel tangible
-before a customer calls.
-</p>
+      <div class="demo-container">
 
-<div class="gallery">
+        <span class="chip">
+          SERVICES
+        </span>
 
-<img
-class="big"
-src="https://sicheyautomotive.com/images/main-slider/image-5.jpg"
-alt="Vehicle workshop reference"
-referrerpolicy="no-referrer">
+        <h2>
+          Everything from diagnostics to preventive maintenance.
+        </h2>
 
-<img
-src="https://nation.africa/resource/image/3842024/landscape_ratio3x2/1620/1080/7c8bcdffa267ed5682509d0bd82792d2/Re/rodah-1.jpg"
-alt="Mechanic vehicle repair reference"
-referrerpolicy="no-referrer">
+        <div class="demo-cards">
 
-<img
-src="https://www.onewayauto.co.ke/_next/image?q=75&url=%2Fimages%2F07.webp&w=3840"
-alt="Automotive workshop reference"
-referrerpolicy="no-referrer">
+          <div class="demo-card">
+            <h3>Vehicle Diagnostics</h3>
+            <p>
+              Find fault codes and electrical or sensor issues.
+            </p>
+          </div>
 
-</div>
+          <div class="demo-card">
+            <h3>Engine Repair</h3>
+            <p>
+              Inspection, repair planning and mechanical work.
+            </p>
+          </div>
 
-<div class="credit">
-Reference imagery for a fictional demo.
-Use client-owned or licensed images for real commercial work.
-</div>
+          <div class="demo-card">
+            <h3>Brake Service</h3>
+            <p>
+              Brake inspection, pads, discs and fluid checks.
+            </p>
+          </div>
 
-</div>
+          <div class="demo-card">
+            <h3>Suspension</h3>
+            <p>
+              Checks for worn parts and handling problems.
+            </p>
+          </div>
 
-</section>
+          <div class="demo-card">
+            <h3>Oil & Filter Service</h3>
+            <p>
+              Routine servicing for everyday vehicle reliability.
+            </p>
+          </div>
 
-<section
-class="demoSection dark"
-id="autoContact">
+          <div class="demo-card">
+            <h3>Electrical Diagnostics</h3>
+            <p>
+              Battery, wiring and charging-system checks.
+            </p>
+          </div>
 
-<div class="demoInner">
+          <div class="demo-card">
+            <h3>Preventive Maintenance</h3>
+            <p>
+              Planned checks designed to reduce avoidable breakdowns.
+            </p>
+          </div>
 
-<div class="demoContact">
+        </div>
 
-<div>
+      </div>
 
-<span class="chip">
-CONTACT
-</span>
+    </section>
 
-<h2>
-Book a visit or ask for a quote.
-</h2>
+    <section class="demo-section dark">
 
-<p>
-Mon–Sat • 8:00am–6:00pm
-<br>
-Nairobi, Kenya
-</p>
+      <div class="demo-container">
 
-</div>
+        <span class="chip">
+          ABOUT
+        </span>
 
-<form
-class="demoForm"
-onsubmit="return demoSubmit(event,'Demo enquiry prepared.');">
+        <h2>
+          Practical repairs. Clear communication.
+        </h2>
 
-<input
-required
-placeholder="Your name">
+        <p>
+          A fictional local garage concept showing how a business can
+          explain its services and make contacting the workshop easy.
+        </p>
 
-<input
-required
-placeholder="Phone number">
+      </div>
 
-<textarea
-required
-placeholder="Tell us what your vehicle needs">
-</textarea>
+    </section>
 
-<button
-class="demoBtn light"
-type="submit">
+    <section
+      class="demo-section"
+      id="auto-gallery">
 
-SEND ENQUIRY
+      <div class="demo-container">
 
-</button>
+        <span class="chip">
+          GALLERY
+        </span>
 
-</form>
+        <h2>
+          Show the real working environment.
+        </h2>
 
-</div>
+        <p>
+          Workshop imagery helps visitors understand the kind of service
+          they are enquiring about.
+        </p>
 
-</div>
+        <div class="demo-gallery">
 
-</section>
+          <img
+            class="big"
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mechanic%20working%20in%20Nairobi.jpg"
+            alt="Mechanic working in Nairobi">
 
-<div class="demoFooter">
+          <img
+            src="https://sicheyautomotive.com/images/main-slider/image-5.jpg"
+            alt="Vehicle engine repair workshop">
 
-<div class="demoInner">
-Kibera Autocare Centre is a fictional portfolio demo.
-No real business is represented.
-</div>
+          <img
+            src="https://dlraauto.co.ke/storage/2024/08/dlra-mechanic-1.jpg"
+            alt="Automotive mechanic working on vehicle">
 
-</div>
+        </div>
 
-</article>
+        <div class="photo-credit">
+          Reference imagery. Replace with approved client-owned photography
+          for a real business website.
+        </div>
 
-<!-- =====================================================
-     DEMO 2 — THIKA FRESH BITES
-===================================================== -->
+      </div>
 
-<article
-class="demo food"
-id="demoFood">
+    </section>
 
-<div class="dark">
+    <section
+      class="demo-section dark"
+      id="auto-contact">
 
-<div class="demoInner">
+      <div class="demo-container">
 
-<div class="demoNav">
+        <div class="demo-contact">
 
-<div class="demoLogo">
-THIKA FRESH BITES
-</div>
+          <div>
 
-<div class="demoLinks">
+            <span class="chip">
+              CONTACT
+            </span>
 
-<a href="#foodHome">
-Home
-</a>
+            <h2>
+              Book a visit or ask for a quote.
+            </h2>
 
-<a href="#foodMenu">
-Menu
-</a>
+            <p>
+              Mon–Sat • 8:00am–6:00pm
+              <br>
+              Nairobi, Kenya
+            </p>
 
-<a href="#foodAbout">
-About
-</a>
+            <div class="demo-actions">
 
-<a href="#foodGallery">
-Gallery
-</a>
+              <a
+                class="demo-btn light"
+                href="tel:0708624297">
+                CALL NOW
+              </a>
 
-<a href="#foodContact">
-Contact
-</a>
+              <a
+                class="demo-btn outline"
+                href="https://wa.me/254708624297"
+                target="_blank"
+                rel="noopener">
+                WHATSAPP
+              </a>
 
-</div>
+            </div>
 
-</div>
+          </div>
 
-</div>
+          <form
+            class="demo-form"
+            onsubmit="return demoSubmit(event,'Kibera Autocare Centre enquiry');">
 
-</div>
+            <input
+              name="name"
+              required
+              placeholder="Your name">
 
-<section
-class="demoHero"
-id="foodHome">
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Your email address">
 
-<div
-class="demoInner"
-style="display:contents">
+            <input
+              name="phone"
+              required
+              placeholder="Phone number">
 
-<div>
+            <textarea
+              name="message"
+              required
+              placeholder="Tell me what your vehicle needs"></textarea>
 
-<span class="chip">
-THIKA • RESTAURANT
-</span>
+            <button
+              class="demo-btn light"
+              type="submit">
+              SEND ENQUIRY
+            </button>
 
-<h1>
-GOOD FOOD. GOOD VIBES.
-</h1>
+            <div class="demo-message">
+              Enquiries from this demo are sent to Nicholas Waweru.
+            </div>
 
-<p>
-Fresh Kenyan favourites and everyday comfort food,
-served for quick lunches, family meals and easy takeaway orders.
-</p>
+          </form>
 
-<div class="demoActions">
+        </div>
 
-<a
-class="demoBtn light"
-href="#foodMenu">
-VIEW MENU
-</a>
+      </div>
 
-<a
-class="demoBtn ghost"
-href="https://wa.me/254708624297?text=Hi%20Thika%20Fresh%20Bites"
-target="_blank"
-rel="noopener">
-ORDER ON WHATSAPP
-</a>
+    </section>
 
-<a
-class="demoBtn ghost"
-href="https://maps.google.com/?q=Thika+Kenya"
-target="_blank"
-rel="noopener">
-GET DIRECTIONS
-</a>
+    <div class="demo-footer">
 
-</div>
+      <div class="demo-container">
+        Kibera Autocare Centre is a fictional portfolio demo.
+      </div>
 
-</div>
+    </div>
 
-<div class="demoPhoto">
+  </article>
 
-<img
-src="https://lp-cms-production.imgix.net/2024-09/Nairobi-cafe-WASP-AND-SPROUT-5ba5035022d1.jpeg?auto=format&fit=crop&q=75&w=1600"
-alt="Nairobi cafe reference"
-referrerpolicy="no-referrer">
+  <!-- ==================================================
+       THIKA FRESH BITES
+  ================================================== -->
 
-</div>
+  <article
+    class="demo-site food-demo"
+    id="demo-food">
 
-</div>
+    <div class="dark">
 
-</section>
+      <div class="demo-container">
 
-<section
-class="demoSection"
-id="foodAbout">
+        <div class="demo-nav">
 
-<div class="demoInner">
+          <div class="demo-logo">
+            THIKA FRESH BITES
+          </div>
 
-<span class="chip">
-ABOUT
-</span>
+          <div class="demo-links">
 
-<h2>
-Easy to browse. Easy to order.
-</h2>
-
-<p>
-A fictional restaurant concept designed around menu discovery,
-visuals, specials and quick customer actions.
-</p>
-
-<div class="demoCards">
-
-<div class="demoCard">
-<h3>
-Breakfast
-</h3>
-<p>
-Simple morning options for commuters and locals.
-</p>
-</div>
-
-<div class="demoCard">
-<h3>
-Lunch
-</h3>
-<p>
-Fast favourites and filling Kenyan plates.
-</p>
-</div>
+            <a href="#food-home">Home</a>
+            <a href="#food-menu">Menu</a>
+            <a href="#food-about">About</a>
+            <a href="#food-gallery">Gallery</a>
+            <a href="#food-contact">Contact</a>
 
-<div class="demoCard">
-<h3>
-Takeaway
-</h3>
-<p>
-Clear WhatsApp ordering for pickup.
-</p>
-</div>
+          </div>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </div>
 
-<section
-class="demoSection dark"
-id="foodMenu">
+    <section
+      class="demo-hero dark"
+      id="food-home">
 
-<div class="demoInner">
+      <div class="demo-container" style="display:contents">
 
-<span class="chip">
-MENU
-</span>
+        <div>
 
-<h2>
-Sample menu & KSh pricing.
-</h2>
+          <span class="chip">
+            THIKA • RESTAURANT
+          </span>
 
-<div class="demoCards">
+          <h1>
+            GOOD FOOD. GOOD VIBES.
+          </h1>
 
-<div class="demoCard">
-<h3>
-Beef Burger
-</h3>
-<p>
-Freshly prepared with chips — KSh 650.
-</p>
-</div>
+          <p>
+            Fresh Kenyan favourites and everyday comfort food,
+            served for breakfast, lunch, casual dinners and takeaway.
+          </p>
 
-<div class="demoCard">
-<h3>
-Chicken Wrap
-</h3>
-<p>
-Grilled chicken, salad and sauce — KSh 450.
-</p>
-</div>
+          <div class="demo-actions">
 
-<div class="demoCard">
-<h3>
-Nyama Choma Plate
-</h3>
-<p>
-Served with ugali and greens — KSh 850.
-</p>
-</div>
+            <a
+              class="demo-btn light"
+              href="#food-menu">
+              VIEW MENU
+            </a>
 
-<div class="demoCard">
-<h3>
-Chips Masala
-</h3>
-<p>
-A Kenyan favourite — KSh 300.
-</p>
-</div>
+            <a
+              class="demo-btn outline"
+              href="https://wa.me/254708624297?text=Hi%20Nicholas%2C%20I%20saw%20the%20Thika%20Fresh%20Bites%20demo"
+              target="_blank"
+              rel="noopener">
+              ORDER ON WHATSAPP
+            </a>
 
-<div class="demoCard">
-<h3>
-Fresh Juice
-</h3>
-<p>
-Mango, passion or cocktail — KSh 220.
-</p>
-</div>
+            <a
+              class="demo-btn outline"
+              href="https://www.google.com/maps/search/?api=1&query=Thika%2C%20Kenya"
+              target="_blank"
+              rel="noopener">
+              GET DIRECTIONS
+            </a>
 
-<div class="demoCard">
-<h3>
-Chai & Mandazi
-</h3>
-<p>
-Breakfast combo — KSh 180.
-</p>
-</div>
+          </div>
 
-</div>
+        </div>
 
-</div>
+        <div class="demo-photo">
 
-</section>
+          <img
+            src="https://images.unsplash.com/photo-1665400808116-f0e6339b7e9a?auto=format&fit=crop&q=80&w=1600"
+            alt="Kenyan-style food">
 
-<section
-class="demoSection"
-id="foodGallery">
+        </div>
 
-<div class="demoInner">
+      </div>
 
-<span class="chip">
-GALLERY
-</span>
+    </section>
 
-<h2>
-Food and atmosphere should sell the experience.
-</h2>
+    <section
+      class="demo-section"
+      id="food-menu">
 
-<div class="gallery">
+      <div class="demo-container">
 
-<img
-class="big"
-src="https://lp-cms-production.imgix.net/2024-09/Nairobi-cafe-WASP-AND-SPROUT-5ba5035022d1.jpeg?auto=format&fit=crop&q=75&w=1600"
-alt="Nairobi cafe reference"
-referrerpolicy="no-referrer">
+        <span class="chip">
+          MENU
+        </span>
 
-<img
-src="https://listing.pamgolding.co.za/images/properties/202002/1576733/H/1576733_H_1.jpg"
-alt="Kenya commercial space reference"
-referrerpolicy="no-referrer">
+        <h2>
+          Simple menu. Clear KSh prices.
+        </h2>
 
-<img
-src="https://nation.africa/resource/image/3842024/landscape_ratio3x2/1620/1080/7c8bcdffa267ed5682509d0bd82792d2/Re/rodah-1.jpg"
-alt="Kenya reference image"
-referrerpolicy="no-referrer">
+        <div class="demo-cards">
 
-</div>
+          <div class="demo-card">
+            <h3>Chicken & Chips</h3>
+            <p>KSh 650</p>
+          </div>
 
-<div class="credit">
-Reference imagery for a fictional concept.
-Replace with food and restaurant photography you have permission to use.
-</div>
+          <div class="demo-card">
+            <h3>Beef Stew & Rice</h3>
+            <p>KSh 480</p>
+          </div>
 
-</div>
+          <div class="demo-card">
+            <h3>Chapati Beef Wrap</h3>
+            <p>KSh 350</p>
+          </div>
 
-</section>
+          <div class="demo-card">
+            <h3>Ugali, Sukuma & Beef</h3>
+            <p>KSh 520</p>
+          </div>
 
-<section
-class="demoSection dark"
-id="foodContact">
+          <div class="demo-card">
+            <h3>Fresh Juice</h3>
+            <p>KSh 220</p>
+          </div>
 
-<div class="demoInner">
+          <div class="demo-card">
+            <h3>Tea & Mandazi</h3>
+            <p>KSh 180</p>
+          </div>
 
-<div class="demoContact">
+          <div class="demo-card">
+            <h3>Nyama Choma Plate</h3>
+            <p>KSh 850</p>
+          </div>
 
-<div>
+        </div>
 
-<span class="chip">
-CONTACT
-</span>
+      </div>
 
-<h2>
-Hungry already?
-</h2>
+    </section>
 
-<p>
-Daily • 7:00am–9:00pm
-<br>
-Thika, Kenya
-</p>
+    <section
+      class="demo-section dark"
+      id="food-about">
 
-<div class="demoActions">
+      <div class="demo-container">
 
-<a
-class="demoBtn light"
-href="https://wa.me/254708624297"
-target="_blank"
-rel="noopener">
-ORDER ON WHATSAPP
-</a>
+        <span class="chip">
+          ABOUT
+        </span>
 
-</div>
+        <h2>
+          A local food concept with personality.
+        </h2>
 
-</div>
+        <p>
+          Fictional restaurant demo designed around fast menu discovery,
+          food visuals, easy ordering and location information.
+        </p>
 
-<form
-class="demoForm"
-onsubmit="return demoSubmit(event,'Demo order request prepared.');">
+        <div class="demo-cards">
 
-<input
-required
-placeholder="Your name">
+          <div class="demo-card">
+            <h3>Eat In</h3>
+            <p>
+              Breakfast, lunch and casual catch-ups.
+            </p>
+          </div>
 
-<input
-required
-placeholder="Phone number">
+          <div class="demo-card">
+            <h3>Takeaway</h3>
+            <p>
+              Quick WhatsApp orders for customers on the move.
+            </p>
+          </div>
 
-<textarea
-required
-placeholder="What would you like to order?">
-</textarea>
+          <div class="demo-card">
+            <h3>Small Events</h3>
+            <p>
+              Sample food options for offices and gatherings.
+            </p>
+          </div>
 
-<button
-class="demoBtn light"
-type="submit">
+        </div>
 
-SEND ORDER REQUEST
+      </div>
 
-</button>
+    </section>
 
-</form>
+    <section
+      class="demo-section"
+      id="food-gallery">
 
-</div>
+      <div class="demo-container">
 
-</div>
+        <span class="chip">
+          GALLERY
+        </span>
 
-</section>
+        <h2>
+          Make the food do the selling.
+        </h2>
 
-<div class="demoFooter">
+        <p>
+          Food websites need food photography — not unrelated stock images.
+        </p>
 
-<div class="demoInner">
-Thika Fresh Bites is a fictional portfolio demo.
-Menu prices are samples only.
-</div>
+        <div class="demo-gallery">
 
-</div>
+          <img
+            class="big"
+            src="https://images.unsplash.com/photo-1665400808116-f0e6339b7e9a?auto=format&fit=crop&q=80&w=1600"
+            alt="Food display">
 
-</article>
+          <img
+            src="https://images.unsplash.com/photo-1601836689782-d08aaffb817d?auto=format&fit=crop&q=80&w=1600"
+            alt="Plate of food">
 
-<!-- =====================================================
-     DEMO 3 — RIFT VALLEY INDUSTRIAL SOLUTIONS
-===================================================== -->
+          <img
+            src="https://chefinova.com/content/kenyan-nyama-choma-table.jpg"
+            alt="Kenyan nyama choma food">
 
-<article
-class="demo industrial"
-id="demoIndustrial">
+        </div>
 
-<div class="dark">
+        <div class="photo-credit">
+          Food reference photography for the fictional demo.
+          Replace with approved restaurant photography for client work.
+        </div>
 
-<div class="demoInner">
+      </div>
 
-<div class="demoNav">
+    </section>
 
-<div class="demoLogo">
-RIFT VALLEY INDUSTRIAL SOLUTIONS
-</div>
+    <section
+      class="demo-section dark"
+      id="food-contact">
 
-<div class="demoLinks">
+      <div class="demo-container">
 
-<a href="#indHome">
-Home
-</a>
+        <div class="demo-contact">
 
-<a href="#indEquipment">
-Equipment
-</a>
+          <div>
 
-<a href="#indServices">
-Services
-</a>
+            <span class="chip">
+              CONTACT
+            </span>
 
-<a href="#indAfter">
-After-sales
-</a>
+            <h2>
+              Hungry already?
+            </h2>
 
-<a href="#indContact">
-Contact
-</a>
+            <p>
+              Daily • 7:00am–9:00pm
+              <br>
+              Thika, Kenya
+            </p>
 
-</div>
+            <div class="demo-actions">
 
-</div>
+              <a
+                class="demo-btn light"
+                href="https://wa.me/254708624297"
+                target="_blank"
+                rel="noopener">
+                ORDER ON WHATSAPP
+              </a>
 
-</div>
+            </div>
 
-</div>
+          </div>
 
-<section
-class="demoHero"
-id="indHome">
+          <form
+            class="demo-form"
+            onsubmit="return demoSubmit(event,'Thika Fresh Bites enquiry');">
 
-<div
-class="demoInner"
-style="display:contents">
+            <input
+              name="name"
+              required
+              placeholder="Your name">
 
-<div>
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Your email address">
 
-<span class="chip">
-NAIROBI • INDUSTRIAL / B2B
-</span>
+            <input
+              name="phone"
+              required
+              placeholder="Phone number">
 
-<h1>
-KEEP BUSINESS MOVING.
-</h1>
+            <textarea
+              name="message"
+              required
+              placeholder="What would you like to order?"></textarea>
 
-<p>
-Material handling and industrial support for warehouses,
-logistics teams, manufacturers and businesses that rely on
-equipment every day.
-</p>
+            <button
+              class="demo-btn light"
+              type="submit">
+              SEND ORDER REQUEST
+            </button>
 
-<div class="demoActions">
+            <div class="demo-message">
+              This demo sends the enquiry to Nicholas Waweru.
+            </div>
 
-<a
-class="demoBtn light"
-href="#indEquipment">
-VIEW EQUIPMENT
-</a>
+          </form>
 
-<a
-class="demoBtn ghost"
-href="#indContact">
-REQUEST A QUOTE
-</a>
+        </div>
 
-</div>
+      </div>
 
-</div>
+    </section>
 
-<div class="demoPhoto">
+    <div class="demo-footer">
 
-<img
-src="https://propscout.co.ke/storage/properties/files/godown-for-sale-in-industrial-area-pqqcq.jpg"
-alt="Industrial warehouse in Nairobi reference"
-referrerpolicy="no-referrer">
+      <div class="demo-container">
+        Thika Fresh Bites is a fictional portfolio demo.
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </article>
 
-</section>
+  <!-- ==================================================
+       INDUSTRIAL
+  ================================================== -->
 
-<section
-class="demoSection"
-id="indEquipment">
+  <article
+    class="demo-site industrial-demo"
+    id="demo-industrial">
 
-<div class="demoInner">
+    <div class="dark">
 
-<span class="chip">
-EQUIPMENT
-</span>
+      <div class="demo-container">
 
-<h2>
-Products buyers can understand quickly.
-</h2>
+        <div class="demo-nav">
 
-<p>
-Fictional B2B concept showing categories,
-support services and clear enquiry paths.
-</p>
+          <div class="demo-logo">
+            RIFT VALLEY INDUSTRIAL SOLUTIONS
+          </div>
 
-<div class="demoCards">
+          <div class="demo-links">
 
-<div class="demoCard">
-<h3>
-Forklifts
-</h3>
-<p>
-Warehouse lifting and material handling equipment.
-</p>
-</div>
+            <a href="#industrial-home">Home</a>
+            <a href="#industrial-equipment">Equipment</a>
+            <a href="#industrial-services">Services</a>
+            <a href="#industrial-gallery">Gallery</a>
+            <a href="#industrial-contact">Contact</a>
 
-<div class="demoCard">
-<h3>
-Material Handling
-</h3>
-<p>
-Pallet movement, storage and warehouse solutions.
-</p>
-</div>
+          </div>
 
-<div class="demoCard">
-<h3>
-Industrial Equipment
-</h3>
-<p>
-Equipment for everyday industrial operations.
-</p>
-</div>
+        </div>
 
-<div class="demoCard">
-<h3>
-Spare Parts
-</h3>
-<p>
-Replacement components and consumables.
-</p>
-</div>
+      </div>
 
-<div class="demoCard">
-<h3>
-Equipment Inspection
-</h3>
-<p>
-Condition checks and operational inspections.
-</p>
-</div>
+    </div>
 
-<div class="demoCard">
-<h3>
-Maintenance
-</h3>
-<p>
-Planned and corrective maintenance support.
-</p>
-</div>
+    <section
+      class="demo-hero dark"
+      id="industrial-home">
 
-</div>
+      <div class="demo-container" style="display:contents">
 
-</div>
+        <div>
 
-</section>
+          <span class="chip">
+            NAIROBI • INDUSTRIAL / B2B
+          </span>
 
-<section
-class="demoSection dark"
-id="indServices">
+          <h1>
+            KEEP BUSINESS MOVING.
+          </h1>
 
-<div class="demoInner">
+          <p>
+            Material handling and industrial support for warehouses,
+            logistics teams, manufacturers and businesses that depend
+            on equipment every day.
+          </p>
 
-<span class="chip">
-SERVICES
-</span>
+          <div class="demo-actions">
 
-<h2>
-Support after the sale.
-</h2>
+            <a
+              class="demo-btn light"
+              href="#industrial-equipment">
+              VIEW EQUIPMENT
+            </a>
 
-<div class="demoCards">
+            <a
+              class="demo-btn outline"
+              href="#industrial-contact">
+              REQUEST A QUOTE
+            </a>
 
-<div class="demoCard">
+          </div>
 
-<h3>
-Planned Maintenance
-</h3>
+        </div>
 
-<p>
-Reduce avoidable downtime with scheduled servicing.
-</p>
+        <div class="demo-photo">
 
-</div>
+          <img
+            src="https://cdn.prod.website-files.com/68491dec0c89cd3226833f4f/68491dec0c89cd322683418c_Newsletter%20Image%2000137.png"
+            alt="Forklift in a Kenyan warehouse">
 
-<div class="demoCard">
+        </div>
 
-<h3>
-Breakdown Response
-</h3>
+      </div>
 
-<p>
-A clear path for urgent equipment support.
-</p>
+    </section>
 
-</div>
+    <section
+      class="demo-section"
+      id="industrial-equipment">
 
-<div class="demoCard">
+      <div class="demo-container">
 
-<h3>
-Inspection Reports
-</h3>
+        <span class="chip">
+          EQUIPMENT
+        </span>
 
-<p>
-Document equipment condition and service needs.
-</p>
+        <h2>
+          Products buyers can understand quickly.
+        </h2>
 
-</div>
+        <div class="demo-cards">
 
-</div>
+          <div class="demo-card">
+            <h3>Forklifts</h3>
+            <p>
+              Warehouse lifting and material handling equipment.
+            </p>
+          </div>
 
-</div>
+          <div class="demo-card">
+            <h3>Material Handling</h3>
+            <p>
+              Pallet movement and warehouse support solutions.
+            </p>
+          </div>
 
-</section>
+          <div class="demo-card">
+            <h3>Industrial Equipment</h3>
+            <p>
+              Equipment for everyday industrial operations.
+            </p>
+          </div>
 
-<section
-class="demoSection"
-id="indAfter">
+          <div class="demo-card">
+            <h3>Spare Parts</h3>
+            <p>
+              Replacement components and consumables.
+            </p>
+          </div>
 
-<div class="demoInner">
+          <div class="demo-card">
+            <h3>Inspection</h3>
+            <p>
+              Equipment condition checks.
+            </p>
+          </div>
 
-<span class="chip">
-AFTER-SALES
-</span>
+          <div class="demo-card">
+            <h3>Maintenance</h3>
+            <p>
+              Planned and corrective maintenance support.
+            </p>
+          </div>
 
-<h2>
-Show customers that support continues.
-</h2>
+        </div>
 
-<p>
-Service requests, parts enquiries, inspections and equipment
-quotes can all be organised through the website.
-</p>
+      </div>
 
-<div class="demoActions">
+    </section>
 
-<a
-class="demoBtn light"
-href="#indContact">
-ENQUIRE NOW
-</a>
+    <section
+      class="demo-section dark"
+      id="industrial-services">
 
-</div>
+      <div class="demo-container">
 
-</div>
+        <span class="chip">
+          SERVICES
+        </span>
 
-</section>
+        <h2>
+          Support after the sale.
+        </h2>
 
-<section class="demoSection">
+        <div class="demo-cards">
 
-<div class="demoInner">
+          <div class="demo-card">
+            <h3>Planned Maintenance</h3>
+            <p>
+              Regular servicing to reduce avoidable downtime.
+            </p>
+          </div>
 
-<span class="chip">
-GALLERY
-</span>
+          <div class="demo-card">
+            <h3>Breakdown Response</h3>
+            <p>
+              A clear route for urgent equipment support.
+            </p>
+          </div>
 
-<h2>
-Show the equipment and working environment.
-</h2>
+          <div class="demo-card">
+            <h3>Inspection Reports</h3>
+            <p>
+              Document equipment condition and service needs.
+            </p>
+          </div>
 
-<div class="gallery">
+        </div>
 
-<img
-class="big"
-src="https://propscout.co.ke/storage/properties/files/godown-for-sale-in-industrial-area-pqqcq.jpg"
-alt="Nairobi warehouse reference"
-referrerpolicy="no-referrer">
+      </div>
 
-<img
-src="https://listing.pamgolding.co.za/images/properties/202002/1576733/H/1576733_H_1.jpg"
-alt="Kenya industrial property reference"
-referrerpolicy="no-referrer">
+    </section>
 
-<img
-src="https://i.roamcdn.net/prop/brk/og-image-full-1200w-630h/8334b208f022438882bf35542bfd96f4/-/prod-property-core-backend-media-brk/9744374/eeb585ce-0c5c-474c-aac0-a9e128785a4d.jpeg"
-alt="Industrial warehouse reference"
-referrerpolicy="no-referrer">
+    <section
+      class="demo-section"
+      id="industrial-gallery">
 
-</div>
+      <div class="demo-container">
 
-<div class="credit">
-Reference imagery for the fictional concept.
-Use client-owned equipment and facility photos for real work.
-</div>
+        <span class="chip">
+          GALLERY
+        </span>
 
-</div>
+        <h2>
+          Show the equipment and environment.
+        </h2>
 
-</section>
+        <div class="demo-gallery">
 
-<section
-class="demoSection dark"
-id="indContact">
+          <img
+            class="big"
+            src="https://cdn.prod.website-files.com/68491dec0c89cd3226833f4f/68491dec0c89cd322683418c_Newsletter%20Image%2000137.png"
+            alt="Forklift operating in warehouse">
 
-<div class="demoInner">
+          <img
+            src="https://propscout.co.ke/storage/properties/files/godown-for-sale-in-industrial-area-pqqcq.jpg"
+            alt="Industrial warehouse in Nairobi">
 
-<div class="demoContact">
+          <img
+            src="https://listing.pamgolding.co.za/images/properties/202002/1576733/H/1576733_H_1.jpg"
+            alt="Industrial building reference">
 
-<div>
+        </div>
 
-<span class="chip">
-CONTACT
-</span>
+        <div class="photo-credit">
+          Industrial reference imagery. Replace with approved client,
+          equipment or warehouse photography for commercial work.
+        </div>
 
-<h2>
-Request an equipment or service quote.
-</h2>
+      </div>
 
-<p>
-Nairobi, Kenya
-<br>
-Mon–Fri • 8:00am–5:00pm
-</p>
+    </section>
 
-</div>
+    <section
+      class="demo-section dark"
+      id="industrial-contact">
 
-<form
-class="demoForm"
-onsubmit="return demoSubmit(event,'Demo quote request prepared.');">
+      <div class="demo-container">
 
-<input
-required
-placeholder="Company name">
+        <div class="demo-contact">
 
-<input
-required
-placeholder="Contact person">
+          <div>
 
-<input
-required
-placeholder="Phone / email">
+            <span class="chip">
+              CONTACT
+            </span>
 
-<textarea
-required
-placeholder="Tell us what equipment or service you need">
-</textarea>
+            <h2>
+              Request an equipment or service quote.
+            </h2>
 
-<button
-class="demoBtn light"
-type="submit">
+            <p>
+              Nairobi, Kenya
+              <br>
+              Mon–Fri • 8:00am–5:00pm
+            </p>
 
-REQUEST QUOTE
+          </div>
 
-</button>
+          <form
+            class="demo-form"
+            onsubmit="return demoSubmit(event,'Rift Valley Industrial Solutions enquiry');">
 
-</form>
+            <input
+              name="company"
+              required
+              placeholder="Company name">
 
-</div>
+            <input
+              name="contact_person"
+              required
+              placeholder="Contact person">
 
-</div>
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Your email address">
 
-</section>
+            <input
+              name="phone"
+              required
+              placeholder="Phone number">
 
-<div class="demoFooter">
+            <textarea
+              name="message"
+              required
+              placeholder="Tell me what equipment or service you need"></textarea>
 
-<div class="demoInner">
-Rift Valley Industrial Solutions is a fictional portfolio demo.
-No real business is represented.
-</div>
+            <button
+              class="demo-btn light"
+              type="submit">
+              REQUEST QUOTE
+            </button>
 
-</div>
+            <div class="demo-message">
+              This demo sends the enquiry to Nicholas Waweru.
+            </div>
 
-</article>
+          </form>
 
-<!-- =====================================================
-     DEMO 4 — MATHARE TECHNICAL SKILLS CENTRE
-===================================================== -->
+        </div>
 
-<article
-class="demo education"
-id="demoEducation">
+      </div>
 
-<div class="dark">
+    </section>
 
-<div class="demoInner">
+    <div class="demo-footer">
 
-<div class="demoNav">
+      <div class="demo-container">
+        Rift Valley Industrial Solutions is a fictional portfolio demo.
+      </div>
 
-<div class="demoLogo">
-MATHARE TECHNICAL SKILLS CENTRE
-</div>
+    </div>
 
-<div class="demoLinks">
+  </article>
 
-<a href="#eduHome">
-Home
-</a>
+  <!-- ==================================================
+       EDUCATION
+  ================================================== -->
 
-<a href="#eduCourses">
-Courses
-</a>
+  <article
+    class="demo-site education-demo"
+    id="demo-education">
 
-<a href="#eduAdmissions">
-Admissions
-</a>
+    <div class="dark">
 
-<a href="#eduFacilities">
-Facilities
-</a>
+      <div class="demo-container">
 
-<a href="#eduContact">
-Contact
-</a>
+        <div class="demo-nav">
 
-</div>
+          <div class="demo-logo">
+            MATHARE TECHNICAL SKILLS CENTRE
+          </div>
 
-</div>
+          <div class="demo-links">
 
-</div>
+            <a href="#education-home">Home</a>
+            <a href="#education-courses">Courses</a>
+            <a href="#education-admissions">Admissions</a>
+            <a href="#education-facilities">Facilities</a>
+            <a href="#education-contact">Contact</a>
 
-</div>
+          </div>
 
-<section
-class="demoHero"
-id="eduHome">
+        </div>
 
-<div
-class="demoInner"
-style="display:contents">
+      </div>
 
-<div>
+    </div>
 
-<span class="chip">
-NAIROBI • TRAINING CENTRE
-</span>
+    <section
+      class="demo-hero dark"
+      id="education-home">
 
-<h1>
-LEARN A SKILL. BUILD YOUR FUTURE.
-</h1>
+      <div class="demo-container" style="display:contents">
 
-<p>
-Practical training concepts for learners who want hands-on
-technical skills in engineering, trades and technology.
-</p>
+        <div>
 
-<div class="demoActions">
+          <span class="chip">
+            NAIROBI • TRAINING CENTRE
+          </span>
 
-<a
-class="demoBtn light"
-href="#eduCourses">
-VIEW COURSES
-</a>
+          <h1>
+            LEARN A SKILL. BUILD YOUR FUTURE.
+          </h1>
 
-<a
-class="demoBtn ghost"
-href="#eduAdmissions">
-APPLY NOW
-</a>
+          <p>
+            Practical training concepts for learners who want hands-on
+            technical skills in engineering, trades and technology.
+          </p>
 
-<a
-class="demoBtn ghost"
-href="#eduContact">
-COURSE ENQUIRY
-</a>
+          <div class="demo-actions">
 
-</div>
+            <a
+              class="demo-btn light"
+              href="#education-courses">
+              VIEW COURSES
+            </a>
 
-</div>
+            <a
+              class="demo-btn outline"
+              href="#education-admissions">
+              APPLY NOW
+            </a>
 
-<div class="demoPhoto">
+            <a
+              class="demo-btn outline"
+              href="#education-contact">
+              COURSE ENQUIRY
+            </a>
 
-<img
-src="https://images.squarespace-cdn.com/content/v1/665d881bda52dc4de2ae1648/1717405731325-XTZNTOIO5TBX0SOXZEWR/DSC_2266.jpg"
-alt="Technical training students reference"
-referrerpolicy="no-referrer">
+          </div>
 
-</div>
+        </div>
 
-</div>
+        <div class="demo-photo">
 
-</section>
+          <img
+            src="https://back.avsi.org/uploads/st-kizito-scuola-kenya-AVSI-2-1024x683.jpg"
+            alt="Vocational training students in Kenya">
 
-<section
-class="demoSection"
-id="eduCourses">
+        </div>
 
-<div class="demoInner">
+      </div>
 
-<span class="chip">
-COURSES
-</span>
+    </section>
 
-<h2>
-Hands-on programmes.
-</h2>
+    <section
+      class="demo-section"
+      id="education-courses">
 
-<p>
-Fictional course list showing how an education website
-can make programme information easier to discover.
-</p>
+      <div class="demo-container">
 
-<div class="demoCards">
+        <span class="chip">
+          COURSES
+        </span>
 
-<div class="demoCard">
-<h3>
-Automotive Engineering
-</h3>
-<p>
-Vehicle systems, maintenance and practical workshop skills.
-</p>
-</div>
+        <h2>
+          Hands-on programmes.
+        </h2>
 
-<div class="demoCard">
-<h3>
-Electrical Installation
-</h3>
-<p>
-Installation, wiring and practical electrical work.
-</p>
-</div>
+        <div class="demo-cards">
 
-<div class="demoCard">
-<h3>
-Welding & Fabrication
-</h3>
-<p>
-Fabrication techniques and workshop practice.
-</p>
-</div>
+          <div class="demo-card">
+            <h3>Automotive Engineering</h3>
+            <p>
+              Vehicle systems, maintenance and practical workshop skills.
+            </p>
+          </div>
 
-<div class="demoCard">
-<h3>
-ICT
-</h3>
-<p>
-Computer skills, digital tools and practical technology.
-</p>
-</div>
+          <div class="demo-card">
+            <h3>Electrical Installation</h3>
+            <p>
+              Wiring, installation and electrical workshop practice.
+            </p>
+          </div>
 
-<div class="demoCard">
-<h3>
-Plumbing
-</h3>
-<p>
-Installation, maintenance and practical plumbing systems.
-</p>
-</div>
+          <div class="demo-card">
+            <h3>Welding & Fabrication</h3>
+            <p>
+              Fabrication techniques and workshop skills.
+            </p>
+          </div>
 
-<div class="demoCard">
-<h3>
-Technical Drawing
-</h3>
-<p>
-Engineering drawing and technical communication.
-</p>
-</div>
+          <div class="demo-card">
+            <h3>ICT</h3>
+            <p>
+              Computer skills and practical digital technology.
+            </p>
+          </div>
 
-</div>
+          <div class="demo-card">
+            <h3>Plumbing</h3>
+            <p>
+              Practical plumbing installation and maintenance.
+            </p>
+          </div>
 
-</div>
+          <div class="demo-card">
+            <h3>Technical Drawing</h3>
+            <p>
+              Engineering drawing and technical communication.
+            </p>
+          </div>
 
-</section>
+        </div>
 
-<section
-class="demoSection dark"
-id="eduAdmissions">
+      </div>
 
-<div class="demoInner">
+    </section>
 
-<span class="chip">
-ADMISSIONS
-</span>
+    <section
+      class="demo-section dark"
+      id="education-admissions">
 
-<h2>
-Make course enquiries simple.
-</h2>
+      <div class="demo-container">
 
-<div class="demoCards">
+        <span class="chip">
+          ADMISSIONS
+        </span>
 
-<div class="demoCard">
+        <h2>
+          Make course enquiries simple.
+        </h2>
 
-<h3>
-Choose a course
-</h3>
+        <div class="demo-cards">
 
-<p>
-Browse courses and basic entry information.
-</p>
+          <div class="demo-card">
+            <h3>Choose a course</h3>
+            <p>
+              Browse courses and basic programme information.
+            </p>
+          </div>
 
-</div>
+          <div class="demo-card">
+            <h3>Ask a question</h3>
+            <p>
+              Use WhatsApp, email or an enquiry form.
+            </p>
+          </div>
 
-<div class="demoCard">
+          <div class="demo-card">
+            <h3>Apply</h3>
+            <p>
+              Move into a clear application step.
+            </p>
+          </div>
 
-<h3>
-Ask a question
-</h3>
+        </div>
 
-<p>
-Use WhatsApp, email or an enquiry form.
-</p>
+      </div>
 
-</div>
+    </section>
 
-<div class="demoCard">
+    <section
+      class="demo-section"
+      id="education-facilities">
 
-<h3>
-Apply
-</h3>
+      <div class="demo-container">
 
-<p>
-Move into a clear application or admission step.
-</p>
+        <span class="chip">
+          FACILITIES
+        </span>
 
-</div>
+        <h2>
+          Show the practical environment.
+        </h2>
 
-</div>
+        <p>
+          Workshop and classroom photography can give prospective learners
+          a better feel for the training environment.
+        </p>
 
-</div>
+        <div class="demo-gallery">
 
-</section>
+          <img
+            class="big"
+            src="https://back.avsi.org/uploads/st-kizito-scuola-kenya-AVSI-2-1024x683.jpg"
+            alt="Kenyan vocational training workshop">
 
-<section
-class="demoSection"
-id="eduFacilities">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/665d881bda52dc4de2ae1648/1717405731405-HU72L3DTYEYQMHEMUIE8/DSC_2230.jpg"
+            alt="Technical training workshop">
 
-<div class="demoInner">
+          <img
+            src="https://www.edukans.nl/app/uploads/2023/07/Edukans-NL-Kenia-jongeren-vaardigheden.jpg"
+            alt="Kenyan technical students">
 
-<span class="chip">
-FACILITIES
-</span>
+        </div>
 
-<h2>
-Show the practical environment.
-</h2>
+        <div class="photo-credit">
+          Kenya vocational-training reference imagery.
+          Replace with approved school photography for a real institution.
+        </div>
 
-<p>
-Workshop and classroom imagery can give prospective learners
-a feel for the training environment.
-</p>
+      </div>
 
-<div class="gallery">
+    </section>
 
-<img
-class="big"
-src="https://images.squarespace-cdn.com/content/v1/665d881bda52dc4de2ae1648/1717405731312-M8UMXXLQTGFLVNMMGHCI/DSC_2230.jpg"
-alt="Technical workshop reference"
-referrerpolicy="no-referrer">
+    <section
+      class="demo-section dark"
+      id="education-contact">
 
-<img
-src="https://images.squarespace-cdn.com/content/v1/665d881bda52dc4de2ae1648/1717405731322-BWCE0OHIDMBX7XZA81MX/DSC_2132.jpg"
-alt="Technical classroom reference"
-referrerpolicy="no-referrer">
+      <div class="demo-container">
 
-<img
-src="https://images.squarespace-cdn.com/content/v1/665d881bda52dc4de2ae1648/1717405731325-XTZNTOIO5TBX0SOXZEWR/DSC_2266.jpg"
-alt="Technical students reference"
-referrerpolicy="no-referrer">
+        <div class="demo-contact">
 
-</div>
+          <div>
 
-<div class="credit">
-Reference imagery for a fictional concept.
-Use approved institution or client-owned images for a real site.
-</div>
+            <span class="chip">
+              CONTACT
+            </span>
 
-</div>
+            <h2>
+              Ask about a course.
+            </h2>
 
-</section>
+            <p>
+              Nairobi, Kenya
+              <br>
+              Mon–Fri • 8:00am–5:00pm
+            </p>
 
-<section
-class="demoSection dark"
-id="eduContact">
+          </div>
 
-<div class="demoInner">
+          <form
+            class="demo-form"
+            onsubmit="return demoSubmit(event,'Mathare Technical Skills Centre enquiry');">
 
-<div class="demoContact">
+            <input
+              name="name"
+              required
+              placeholder="Your name">
 
-<div>
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Your email address">
 
-<span class="chip">
-CONTACT
-</span>
+            <input
+              name="phone"
+              required
+              placeholder="Phone number">
 
-<h2>
-Ask about a course.
-</h2>
+            <input
+              name="course"
+              required
+              placeholder="Course you are interested in">
 
-<p>
-Nairobi, Kenya
-<br>
-Mon–Fri • 8:00am–5:00pm
-</p>
+            <textarea
+              name="message"
+              required
+              placeholder="What would you like to know?"></textarea>
 
-</div>
+            <button
+              class="demo-btn light"
+              type="submit">
+              SEND COURSE ENQUIRY
+            </button>
 
-<form
-class="demoForm"
-onsubmit="return demoSubmit(event,'Demo course enquiry prepared.');">
+            <div class="demo-message">
+              This demo sends the enquiry to Nicholas Waweru.
+            </div>
 
-<input
-required
-placeholder="Your name">
+          </form>
 
-<input
-required
-placeholder="Phone number">
+        </div>
 
-<input
-required
-placeholder="Course you are interested in">
+      </div>
 
-<textarea
-required
-placeholder="What would you like to know?">
-</textarea>
+    </section>
 
-<button
-class="demoBtn light"
-type="submit">
+    <div class="demo-footer">
 
-SEND ENQUIRY
+      <div class="demo-container">
+        Mathare Technical Skills Centre is a fictional portfolio demo.
+      </div>
 
-</button>
+    </div>
 
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<div class="demoFooter">
-
-<div class="demoInner">
-Mathare Technical Skills Centre is a fictional portfolio demo.
-No real institution is represented.
-</div>
-
-</div>
-
-</article>
+  </article>
 
 </div>
 
 <script>
 
 const CONTACT = {
-whatsapp:"254708624297",
-phone:"0708624297",
-email:"nicholaskanyi00@gmail.com"
+  email: "nicholaskanyi00@gmail.com",
+  whatsapp: "254708624297",
+  phone: "0708624297"
 };
 
 document.getElementById("year").textContent =
-new Date().getFullYear();
+  new Date().getFullYear();
 
-/* MOBILE MENU */
+/* ==================================================
+   MOBILE MENU
+================================================== */
 
 const menuBtn =
-document.getElementById("menuBtn");
+  document.getElementById("menuBtn");
 
 const navLinks =
-document.getElementById("navLinks");
+  document.getElementById("navLinks");
 
-menuBtn.addEventListener("click",()=>{
+menuBtn.addEventListener("click", () => {
 
-const open =
-navLinks.classList.toggle("open");
+  const open =
+    navLinks.classList.toggle("open");
 
-menuBtn.setAttribute(
-"aria-expanded",
-String(open)
-);
+  menuBtn.setAttribute(
+    "aria-expanded",
+    String(open)
+  );
 
-});
-
-navLinks.querySelectorAll("a").forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-navLinks.classList.remove("open");
+  menuBtn.setAttribute(
+    "aria-label",
+    open ? "Close menu" : "Open menu"
+  );
 
 });
 
+navLinks
+  .querySelectorAll("a")
+  .forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      navLinks.classList.remove("open");
+
+      menuBtn.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      menuBtn.setAttribute(
+        "aria-label",
+        "Open menu"
+      );
+
+    });
+
+  });
+
+/* ==================================================
+   TOP BUTTON
+================================================== */
+
+const topBtn =
+  document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+  topBtn.classList.toggle(
+    "show",
+    window.scrollY > 500
+  );
+
 });
 
-/* DEMO VIEWER */
+topBtn.addEventListener("click", () => {
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+});
+
+/* ==================================================
+   DEMO VIEWER
+================================================== */
 
 const viewer =
-document.getElementById("viewer");
+  document.getElementById("demoViewer");
+
+const backDemo =
+  document.getElementById("backDemo");
 
 const viewerTitle =
-document.getElementById("viewerTitle");
+  document.getElementById("viewerTitle");
 
-const backBtn =
-document.getElementById("backBtn");
+const demoMap = {
 
-const DEMOS = {
+  auto:{
+    id:"demo-auto",
+    title:"Kibera Autocare Centre"
+  },
 
-auto:{
-id:"demoAuto",
-title:"Kibera Autocare Centre"
-},
+  food:{
+    id:"demo-food",
+    title:"Thika Fresh Bites"
+  },
 
-food:{
-id:"demoFood",
-title:"Thika Fresh Bites"
-},
+  industrial:{
+    id:"demo-industrial",
+    title:"Rift Valley Industrial Solutions"
+  },
 
-industrial:{
-id:"demoIndustrial",
-title:"Rift Valley Industrial Solutions"
-},
-
-education:{
-id:"demoEducation",
-title:"Mathare Technical Skills Centre"
-}
+  education:{
+    id:"demo-education",
+    title:"Mathare Technical Skills Centre"
+  }
 
 };
 
+function showDemo(key){
+
+  const data =
+    demoMap[key];
+
+  if(!data) return;
+
+  document
+    .querySelectorAll(".demo-site")
+    .forEach(site => {
+
+      site.classList.remove("active");
+
+    });
+
+  const site =
+    document.getElementById(data.id);
+
+  if(!site) return;
+
+  site.classList.add("active");
+
+  viewerTitle.textContent =
+    data.title;
+
+  viewer.classList.add("open");
+
+  viewer.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+  document.body.classList.add("locked");
+
+  viewer.scrollTop = 0;
+
+  backDemo.focus();
+
+}
+
 function openDemo(key){
 
-const demo =
-DEMOS[key];
+  if(!demoMap[key]) return;
 
-if(!demo) return;
+  /*
+    IMPORTANT:
+    The URL itself does not change.
+    We only create a browser-history state.
+    This stops the Back button from throwing
+    the visitor out to the GitHub page.
+  */
 
-document
-.querySelectorAll(".demo")
-.forEach(x=>{
-x.classList.remove("active");
-});
+  history.pushState(
+    {
+      portfolioDemo:true,
+      demo:key
+    },
+    "",
+    window.location.href
+  );
 
-document
-.getElementById(demo.id)
-.classList.add("active");
-
-viewerTitle.textContent =
-demo.title;
-
-viewer.classList.add("open");
-
-viewer.setAttribute(
-"aria-hidden",
-"false"
-);
-
-document.body.classList.add(
-"no-scroll"
-);
-
-viewer.scrollTop = 0;
-
-backBtn.focus();
+  showDemo(key);
 
 }
 
-function closeDemo(){
+function hideDemo(){
 
-viewer.classList.remove("open");
+  viewer.classList.remove("open");
 
-viewer.setAttribute(
-"aria-hidden",
-"true"
-);
+  viewer.setAttribute(
+    "aria-hidden",
+    "true"
+  );
 
-document.body.classList.remove(
-"no-scroll"
-);
-
-}
-
-document
-.querySelectorAll(".openDemo")
-.forEach(button=>{
-
-button.addEventListener(
-"click",
-()=>openDemo(button.dataset.demo)
-);
-
-});
-
-backBtn.addEventListener(
-"click",
-closeDemo
-);
-
-document.addEventListener(
-"keydown",
-event=>{
-
-if(
-event.key==="Escape" &&
-viewer.classList.contains("open")
-){
-
-closeDemo();
+  document.body.classList.remove(
+    "locked"
+  );
 
 }
 
-}
-);
+/*
+  The visible Back to Portfolio button
+  now goes exactly one history step back.
+*/
 
-/* DEMO FORMS */
+backDemo.addEventListener("click", () => {
 
-function demoSubmit(
-event,
-message
-){
+  if(
+    history.state &&
+    history.state.portfolioDemo
+  ){
 
-event.preventDefault();
+    history.back();
 
-alert(message);
+  }else{
 
-event.target.reset();
+    hideDemo();
 
-return false;
-
-}
-
-window.demoSubmit =
-demoSubmit;
-
-/* CONTACT FORM */
-
-document
-.getElementById("contactForm")
-.addEventListener("submit",event=>{
-
-event.preventDefault();
-
-const form =
-event.currentTarget;
-
-if(!form.reportValidity())
-return;
-
-const data =
-new FormData(form);
-
-const subject =
-`${data.get("need")} enquiry from ${data.get("business")}`;
-
-const body = [
-
-`Name: ${data.get("name")}`,
-
-`Business: ${data.get("business")}`,
-
-`Email: ${data.get("email")}`,
-
-`Need: ${data.get("need")}`,
-
-"",
-
-String(
-data.get("message")
-)
-
-].join("\n");
-
-const status =
-document.getElementById("status");
-
-status.style.display =
-"block";
-
-status.textContent =
-"Opening your email app…";
-
-window.location.href =
-`mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
 
 });
 
-/* BACK TO TOP */
-
-const topBtn =
-document.getElementById("topBtn");
+/*
+  Browser Back also closes the demo
+  instead of leaving the portfolio.
+*/
 
 window.addEventListener(
-"scroll",
-()=>{
+  "popstate",
+  () => {
 
-topBtn.classList.toggle(
-"show",
-window.scrollY > 480
+    hideDemo();
+
+  }
 );
-
-}
-);
-
-topBtn.addEventListener(
-"click",
-()=>{
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-);
-
-/* DEMO INTERNAL LINKS */
 
 document
-.querySelectorAll(".viewer a[href^='#']")
-.forEach(link=>{
+  .querySelectorAll(".open-demo")
+  .forEach(button => {
 
-link.addEventListener(
-"click",
-event=>{
+    button.addEventListener(
+      "click",
+      () => {
 
-const target =
-document.querySelector(
-link.getAttribute("href")
+        openDemo(
+          button.dataset.demo
+        );
+
+      }
+    );
+
+  });
+
+/*
+  Escape closes the demo.
+*/
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if(
+      event.key === "Escape" &&
+      viewer.classList.contains("open")
+    ){
+
+      if(
+        history.state &&
+        history.state.portfolioDemo
+      ){
+
+        history.back();
+
+      }else{
+
+        hideDemo();
+
+      }
+
+    }
+
+  }
 );
 
-if(target){
+/*
+  Demo navigation scrolls inside
+  the demo without changing the main URL.
+*/
 
-event.preventDefault();
+document
+  .querySelectorAll(
+    ".demo-viewer a[href^='#']"
+  )
+  .forEach(link => {
 
-target.scrollIntoView({
-behavior:"smooth",
-block:"start"
-});
+    link.addEventListener(
+      "click",
+      event => {
+
+        const selector =
+          link.getAttribute("href");
+
+        const target =
+          document.querySelector(selector);
+
+        if(target){
+
+          event.preventDefault();
+
+          target.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+          });
+
+        }
+
+      }
+    );
+
+  });
+
+/* ==================================================
+   REAL EMAIL FORM DELIVERY
+   FORMSubmit
+================================================== */
+
+const FORM_ENDPOINT =
+  `https://formsubmit.co/ajax/${CONTACT.email}`;
+
+async function sendToEmail(
+  form,
+  subject
+){
+
+  const data =
+    new FormData(form);
+
+  const fields =
+    Object.fromEntries(
+      data.entries()
+    );
+
+  fields._subject =
+    subject;
+
+  fields._template =
+    "table";
+
+  fields._replyto =
+    fields.email || "";
+
+  fields._url =
+    window.location.href;
+
+  const response =
+    await fetch(
+      FORM_ENDPOINT,
+      {
+        method:"POST",
+
+        headers:{
+          "Content-Type":
+            "application/json",
+
+          "Accept":
+            "application/json"
+        },
+
+        body:
+          JSON.stringify(fields)
+      }
+    );
+
+  let result = {};
+
+  try{
+
+    result =
+      await response.json();
+
+  }catch(error){
+
+    result = {};
+
+  }
+
+  if(
+    !response.ok ||
+    result.success === false
+  ){
+
+    throw new Error(
+      result.message ||
+      "Form submission failed."
+    );
+
+  }
+
+  return result;
 
 }
 
-}
-);
+/* ==================================================
+   DEMO FORMS
+================================================== */
 
-});
+async function demoSubmit(
+  event,
+  subject
+){
+
+  event.preventDefault();
+
+  const form =
+    event.currentTarget;
+
+  if(!form.reportValidity()){
+    return false;
+  }
+
+  const button =
+    form.querySelector(
+      "button[type='submit']"
+    );
+
+  const originalText =
+    button
+      ? button.textContent
+      : "";
+
+  if(button){
+
+    button.disabled = true;
+
+    button.textContent =
+      "SENDING…";
+
+  }
+
+  try{
+
+    await sendToEmail(
+      form,
+      subject
+    );
+
+    alert(
+      "Enquiry sent successfully. Nicholas will receive it by email."
+    );
+
+    form.reset();
+
+  }catch(error){
+
+    console.error(error);
+
+    alert(
+      "The first submission needs one-time activation. Check nicholaskanyi00@gmail.com for the FormSubmit activation email, confirm it, then submit again."
+    );
+
+  }finally{
+
+    if(button){
+
+      button.disabled = false;
+
+      button.textContent =
+        originalText;
+
+    }
+
+  }
+
+  return false;
+
+}
+
+/* ==================================================
+   MAIN CONTACT FORM
+================================================== */
+
+const mainForm =
+  document.getElementById(
+    "mainContactForm"
+  );
+
+const mainStatus =
+  document.getElementById(
+    "mainStatus"
+  );
+
+mainForm.addEventListener(
+  "submit",
+  async event => {
+
+    event.preventDefault();
+
+    if(!mainForm.reportValidity()){
+      return;
+    }
+
+    const button =
+      mainForm.querySelector(
+        "button[type='submit']"
+      );
+
+    const originalText =
+      button.textContent;
+
+    button.disabled = true;
+
+    button.textContent =
+      "SENDING…";
+
+    mainStatus.style.display =
+      "block";
+
+    mainStatus.style.color =
+      "";
+
+    mainStatus.textContent =
+      "Sending your enquiry…";
+
+    const data =
+      new FormData(mainForm);
+
+    const subject =
+      `${data.get("need")} enquiry from ${data.get("business")}`;
+
+    try{
+
+      await sendToEmail(
+        mainForm,
+        subject
+      );
+
+      mainStatus.textContent =
+        "Enquiry sent successfully. It has been forwarded to Nicholas's email.";
+
+      mainForm.reset();
+
+    }catch(error){
+
+      console.error(error);
+
+      mainStatus.style.color =
+        "#a8502f";
+
+      mainStatus.textContent =
+        "Check Gmail for the FormSubmit activation email, confirm it once, then submit the form again.";
+
+    }finally{
+
+      button.disabled = false;
+
+      button.textContent =
+        originalText;
+
+    }
+
+  }
+);
 
 </script>
 
